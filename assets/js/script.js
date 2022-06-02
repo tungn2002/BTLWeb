@@ -62,11 +62,9 @@ window.addEventListener("load",function(){
                 iat=0;
                 for(let i=0;i<slidesLength;i++){
                     handleChangeSlide(-1);
-                    alert(iat);
                 }
             }else{
                 handleChangeSlide(1);
-                alert(iat);
             }
         },4000);
 });
