@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="./assets/css/trangchu.css">
-
+    <link rel="stylesheet" href="./assets/css/dangnhap.css">
     <!--Icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Document</title>
@@ -18,10 +16,10 @@
         <div class="c2">
             <div class="lc">
                 <ul>
-                <li><a href=""><i class="fa-solid fa-users"></i> TUYỂN DỤNG</li>
+                <li><a href=""><i class="fa-solid fa-users"></i> TUYỂN DỤNG</a></li>
                 <li><a href=""><i class="fa-solid fa-newspaper"></i> TIN MỚI VÀ ƯU ĐÃI</a></li>
                 <li><a href=""><i class="fa-solid fa-ticket"></i> VÉ CỦA TÔI</a></li>
-                <li><a href="./log.html"><i class="fa-solid fa-user"></i> ĐĂNG NHẬP/ĐĂNG KÝ</a></li>
+                <li><a href=""><i class="fa-solid fa-user"></i> ĐĂNG NHẬP/ĐĂNG KÝ</a></li>
             </ul>
             </div>
         </div>
@@ -53,67 +51,19 @@
             </div>
         </div>
         <div class="c4">
-            <div class="ttc">
-                <ul><li><a href=""><img src="" alt=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li></ul>
-            </div>
-            
-        </div>
-        <div class="c5">
-            <div class="slider">
-                <i id="sl1" class="fa-solid fa-angle-left slider-prev"></i>
-                <i id="sl2" class="fa-solid fa-angle-right slider-next"></i>
-                <ul><li><i class="fa-solid fa-circle dot active" data-index="0"></i></li>
-                <li><i class="fa-solid fa-circle dot" data-index="1"></i></li>
-                <li><i class="fa-solid fa-circle dot" data-index="2"></i></li>
-                <li><i class="fa-solid fa-circle dot" data-index="3"></i></li></ul>
-                <div class="slider-wrapper">
-                    <div class="slider-main">
-                    <div class="slider-item"><img src="https://br.atsit.in/vi/wp-content/uploads/2022/01/nguoi-ham-mo-genshin-impact-tuc-gian-vi-qua-nhieu-doi-thoai-cua-paimon.jpg" alt=""></div>
-                    <div class="slider-item"><img src="https://pic-bstarstatic.akamaized.net/ugc/83c6db341241c00af765b9d5cc552893bf5a008d.png@720w_406h_1e_1c_1f.webp" alt=""></div>
-                    <div class="slider-item"><img src="" alt=""></div>
-                    <div class="slider-item"><img src="" alt=""></div>
+            <div class="f">
+                <div class="change">
+                    <div class="w1"><a href="./log.html"><b><u> ĐĂNG NHẬP</u></b></a></div>
+                    <div class="w2"><a href="./reg.html"><b>ĐĂNG KÝ</b></a></div>
                 </div>
-                </div>
-            </div>
-        </div>
-        <div class="c6">
-            <div class="tx1">
-                <div id="x1"></div>
-                <div id="x2"><img src="./assets/img/moviesel.gif" alt=""></div>
-            </div>
-        </div>
-        <div class="c7">
-            <div class="hot">
-                <div class="hotitem it1"><div class="an"><a href=""></a></div><div class="bot"></div><div class="bt"><a href="">XEM CHI TIẾT</a></div>
-                </div>
-                <div class="hotitem it2"><div class="an"><a href=""></a></div><div class="bot"></div><div class="bt"><a href="">XEM CHI TIẾT</a></div>
-                </div>
-                <div class="hotitem it3"><div class="an"><a href=""></a></div><div class="bot"></div><div class="bt"><a href="">XEM CHI TIẾT</a></div>
-                </div>
-                <div class="hotitem it4"><div class="an"><a href=""></a></div><div class="bot"></div><div class="bt"><a href="">XEM CHI TIẾT</a></div>
-                </div>
-            </div>
-        </div>
-        
- <div class="c8">
-            <div class="tx2">
-                <div id="z1"></div>
-                <div id="z2"><img src="./assets/img/event.gif" alt=""></div>
-            </div>
-        </div>
-        <div class="c9">
-            <div class="event">
-                <div class="e1"><div class="ee1"><div class="eee1"><a href=""></a></div></div>
-                </div>
-                <div class="e2"><div class="ee2"><div class="eee2"><a href=""></a></div></div>
-                </div>
-                <div class="e3"><div class="ee3"><div class="eee3"><a href=""></a></div></div>
+                <div class="ff">
+                    <form action="">
+                        <label for="">Email</label><br>
+                        <input id="email" type="text"> <br>
+                        <label for="">Mật khẩu</label> <br>
+                        <input id="pass" type="text"><br>
+                        <button onclick="login()">Đăng nhập</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -155,6 +105,6 @@
         </div>
         <div class="c13"></div>
     </div>
-    <script src="./assets/js/trangchu.js"></script>
+    <script src="./assets/js/dangnhap.js"></script>
 </body>
 </html>

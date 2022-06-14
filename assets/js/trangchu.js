@@ -1,4 +1,25 @@
 window.addEventListener("load",function(){
+    //neu dang co tai khoan dang nhap thi dx het
+    let listUser=localStorage.getItem("list-user") ? JSON.parse(localStorage.getItem("list-user")):[] ;
+        listUser.map((value,index)=>{
+            listUser[index]={
+                makh:value.makh,
+                username : value.username,
+                email :value.email,
+                phonenumber:value.phonenumber,
+                pass:value.pass,
+                day:value.day,
+                month:value.month,
+                year:value.year,
+                gen:value.gen,
+                khu:value.khu,
+                rap:value.rap,
+                login:null
+            }
+            localStorage.setItem("list-user",JSON.stringify(listUser));
+            
+        });
+    //
     const slider=document.querySelector(".slider");
     const sliderMain=document.querySelector(".slider-main");
     const sliderItem=document.querySelectorAll(".slider-item");
@@ -51,20 +72,7 @@ window.addEventListener("load",function(){
         [ ... dotItems].forEach(el=>el.classList.remove("active"));
 
         dotItems[index].classList.add("active");
-        
-
-
-        
-
+                
     }
-    setInterval(function(){
-            if(iat>=slidesLength-1){
-                iat=0;
-                for(let i=0;i<slidesLength;i++){
-                    handleChangeSlide(-1);
-                }
-            }else{
-                handleChangeSlide(1);
-            }
-        },4000);
+
 });

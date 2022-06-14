@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/admin.css" />
+    <title>Trang web quản trị</title>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold border-bottom">
+                <i class="fa-solid fa-screwdriver-wrench me-2"></i>ADMIN</div>
+            <div class="list-group list-group-flush my-3">
+                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                        class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+                <a href="./quanlyphong.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fa-solid fa-door-open me-2"></i>Quản lý phòng</a>
+                <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
+                <a href="./quanlyphim.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fa-solid fa-file-video me-2"></i>Quản lý phim</a>
+                <a href="./quanlyve.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-chart-line me-2"></i>Quản lý vé</a>
+                <a href="./quanlykhach.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fa-solid fa-users me-2"></i>Quản lý khách hàng</a>
+                <a href="./quanlyweb.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="fa-solid fa-newspaper me-2"></i>Quản lý nội dung web</a>
+                <a href="./hompage.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                        class="fas fa-power-off me-2"></i>Đăng xuất</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-2 m-0">Thêm ghế
+                    </h2>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                
+            </nav>
+            <div class="d-grid d-md-block">
+                <a class="btn btn-primary" href="./quanlyghe.html" role="button">Quay lại</a>
+            </div>    
+            <div class="container-fluid px-4">
+                <form>
+                    <div class="form-group">
+                        <label for="">Mã ghế</label>
+                      <input type="text" id="name" class="form-control" >
+                    </div>   
+                    <div class="form-group">
+                        <label for="">Mã phòng</label>
+                        <select class="form-control" id="name2">
+                        </select>
+                      </div>
+                    <button id ="btn" class="btn btn-primary" onclick="add()">Thêm</button>
+                  </form>
+                
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    </div>
+
+      <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+    <script>
+       window.addEventListener('load', (event) => {
+            //Cap nhat vao bang khi form load
+            loadcb();
+        });
+        
+        function add(){
+            var maghe=document.getElementById('name').value;
+            var select=document.getElementById('name2');
+            var maphong=select.options[select.selectedIndex].value;
+            let listGhe=localStorage.getItem("list-ghe") ? JSON.parse(localStorage.getItem("list-ghe")):[] ;
+            if(listGhe.length==40){
+            alert("Lớn nhất là 40 ghế.");
+            }
+            else{
+                var trung=0;
+            listGhe.map((value,index)=>{
+                    if(value.maghe==maghe){
+                    trung++;
+                    }
+                });
+                if(trung>0){
+                    alert("Mã ghế đã tồn tại");
+                }
+                else{
+                    listGhe.push({
+                        maghe:maghe,
+                        maphong:maphong,
+                        tinhtrang:null
+                    });
+                    localStorage.setItem("list-ghe",JSON.stringify(listGhe));
+                }
+            }
+            
+        }
+        function loadcb(){
+            let listRoom=localStorage.getItem("list-room") ? JSON.parse(localStorage.getItem("list-room")):[] ;
+            let html=`<option>null</option>`;
+
+            listRoom.map((value,index)=>{
+                    html+=`
+                    <option>${value.maphong}</option>
+                    `;
+            });
+
+            var select=document.getElementById('name2');
+            select.innerHTML=`
+            ${html}
+            `
+        }
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+    </script>
+</body>
+
+</html>
