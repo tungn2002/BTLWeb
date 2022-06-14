@@ -193,23 +193,13 @@
 
 /* Phan Noi Dung */
 
-.main .c4 {
+.main .c4 .Content {
     height: auto;
     display: flex;
-    justify-content: center;
-}
-
-.main .c4 .Content {
     margin-top: 20px;
 }
 
-.main .c4>span {
-    font-size: 50px !important;
-}
-
 .main .Content_Sub_Menu {
-    display: flex;
-    width: 100%;
     padding: 5px 266px;
     background-color: #f1f0e5;
     border-bottom: 1px solid #caca;
@@ -228,13 +218,44 @@
 
 /* Phan Anh */
 
-.main .c4 .Content .Img {
+.main .c4 .Content .MenuTuyenDung {
     float: left;
+    margin-left: 270px;
 }
 
-.main .c4 .Content .Img img {
-    height: 287px;
-    width: 181px;
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung {
+    width: 200px;
+    list-style: none;
+}
+
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung li {
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .active {
+    background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/ribon_left.png) no-repeat scroll left center #e71a0f;
+}
+
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .active a {
+    color: white!important;
+    text-decoration: none;
+}
+
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .inactive {
+    background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/ribon_left-ccc.png) no-repeat scroll left center #ccc;
+}
+
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .inactive a {
+    color: #666!important;
+    text-decoration: none;
+}
+
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung li a {
+    font-weight: bolder;
+    line-height: 35px;
+    font-size: 14px;
+    padding-left: 22px;
 }
 
 
@@ -242,43 +263,24 @@
 
 .main .c4 .Content .Describe {
     float: left;
+    display: inline;
+    max-width: 50%;
     margin-left: 20px;
 }
 
-
-/* Ten Phim */
-
-.main .c4 .Content .Describe .Name {
-    color: black;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 18px;
+.main .c4 .Content .Describe>h2 {
+    text-align: center;
+    color: #e71a0f;
+    font-size: 18px;
+    margin: 18px 0 5px 0;
 }
 
-
-/* Phan Lable in dam */
-
-.main .c4 .Content .Describe .wa .wa1 label {
-    font-weight: bolder;
-    display: inline-flex;
-    font-size: 13px;
+.main .c4 .Content .Describe .content-khoi-nghiep ul {
+    text-decoration: none;
+    padding-left: 35px;
 }
 
-.main .c4 .Content .Describe .wa .wa1 .std {
-    display: inline-flex;
-    font-size: 14px;
-}
-
-.main .c4 .Content .Describe .wa .wa1 .std_Rated {
-    display: inline-flex;
-    font-weight: bolder;
-    font-size: 13px;
-}
-
-
-/* Phan noi dung mo ta */
-
-.main .c4 .Last {
-    float: left;
-    margin: 20px 0 20px 0;
+.main .c4 .Content .Describe .content-khoi-nghiep ul li a {
+    text-decoration: none;
+    color: #e71a0f;
 }
