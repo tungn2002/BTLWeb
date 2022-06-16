@@ -1,0 +1,7 @@
+.container-item{
+    float: left;
+    margin:20px;
+}
+.container-item img{
+    border: 4px solid #333;
+}
