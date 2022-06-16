@@ -22,7 +22,7 @@
                 <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="./quanlyphong.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fa-solid fa-door-open me-2"></i>Quản lý phòng</a>
+                    <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
                 <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
                 <a href="./quanlyphim.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
@@ -65,7 +65,7 @@
                       <input type="text" id="name" class="form-control" >
                     </div>   
                     <div class="form-group">
-                        <label for="">Mã phòng</label>
+                        <label for="">Mã ca</label>
                         <select class="form-control" id="name2">
                         </select>
                       </div>
@@ -90,7 +90,7 @@
         function add(){
             var maghe=document.getElementById('name').value;
             var select=document.getElementById('name2');
-            var maphong=select.options[select.selectedIndex].value;
+            var maca=select.options[select.selectedIndex].value;
             let listGhe=localStorage.getItem("list-ghe") ? JSON.parse(localStorage.getItem("list-ghe")):[] ;
             if(listGhe.length==40){
             alert("Lớn nhất là 40 ghế.");
@@ -108,8 +108,7 @@
                 else{
                     listGhe.push({
                         maghe:maghe,
-                        maphong:maphong,
-                        tinhtrang:null
+                        maca:maca,
                     });
                     localStorage.setItem("list-ghe",JSON.stringify(listGhe));
                 }
@@ -117,12 +116,12 @@
             
         }
         function loadcb(){
-            let listRoom=localStorage.getItem("list-room") ? JSON.parse(localStorage.getItem("list-room")):[] ;
+            let listCa=localStorage.getItem("list-ca") ? JSON.parse(localStorage.getItem("list-ca")):[] ;
             let html=`<option>null</option>`;
 
-            listRoom.map((value,index)=>{
+            listCa.map((value,index)=>{
                     html+=`
-                    <option>${value.maphong}</option>
+                    <option>${value.maca}</option>
                     `;
             });
 

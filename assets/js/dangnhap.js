@@ -53,6 +53,7 @@ function signUp(){
                 gen:gen,
                 khu:khu,
                 rap:rap,
+                avatar:null,
                 login:null,
             })
             //day mang vao local
@@ -71,6 +72,13 @@ function signUp(){
 
 }
 
+function kt(){        
+    var a=document.getElementById('phonenumber');
+    if(isNaN(a.value)){
+        alert("Phải nhập đúng số điện thoại!");
+        a.value="";
+    }
+}
 function login(){
     
     event.preventDefault();

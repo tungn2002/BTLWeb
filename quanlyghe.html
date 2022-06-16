@@ -22,7 +22,7 @@
                 <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="./quanlyphong.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fa-solid fa-door-open me-2"></i>Quản lý phòng</a>
+                    <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
                 <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text active">
                     <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
                 <a href="./quanlyphim.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
@@ -88,7 +88,7 @@
                     html+=`
                     <tr>
                         <td>${value.maghe}</td>
-                        <td>${value.maphong}</td>
+                        <td>${value.maca}</td>
                         <td><button type="button" class="btn btn-primary" onclick="del(${index})">Xóa</button></td>
                     </tr>
                     `;
@@ -97,7 +97,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Mã ghế</th>
-                        <th scope="col">Mã phòng</th>
+                        <th scope="col">Ca</th>
                         <th scope="col">Tùy chỉnh</th>
                     </tr>
                 </thead>
@@ -111,24 +111,28 @@
             loadb();
         });
         function del(index){
-            if (confirm('Bạn có chắc muốn xóa không?')) {
-            //1. lay ra de xoa
-            let listGhe=localStorage.getItem("list-ghe") ? JSON.parse(localStorage.getItem("list-ghe")):[] ;
-            var a=listGhe[index].maghe;
-            //2, xoa
-            listGhe.splice(index,1);
-            //3. day len local
-            localStorage.setItem("list-ghe",JSON.stringify(listGhe));
-            //loadlai
-            //xoa ghe se xoa ve
-            let listVe=localStorage.getItem("list-ve") ? JSON.parse(localStorage.getItem("list-ve")):[] ;
-            listVe.map((value,index)=>{
-                if(value.maghe==a){
-                    listVe.splice(index,1);
-                }
-            });
+            if (confirm('Bạn có chắc muốn xóa không?. Nếu xóa ghế sẽ cả vé đã đặt ghế')) {
+                
+                    //1. lay ra de xoa
+                    let listGhe=localStorage.getItem("list-ghe") ? JSON.parse(localStorage.getItem("list-ghe")):[] ;
+                    var a=listGhe[index].maghe;
+                    //2, xoa
+                    listGhe.splice(index,1);
+                    //3. day len local
+                    localStorage.setItem("list-ghe",JSON.stringify(listGhe));
+                    //loadlai
+                    //xoa ghe se xoa ve
+                    let listVe=localStorage.getItem("list-ve") ? JSON.parse(localStorage.getItem("list-ve")):[] ;
+                    listVe.map((value,index2)=>{
+                        if(value.maghe==a){
+                            listVe.splice(index2,1);
+                            
+                        }
+                    });
+                    localStorage.setItem("list-ve",JSON.stringify(listVe));
+                    loadb();
+                
             }
-            loadb();
             
         }
         var el = document.getElementById("wrapper");

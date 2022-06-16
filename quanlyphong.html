@@ -22,7 +22,7 @@
                 <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="./quanlyphong.html" class="list-group-item list-group-item-action bg-transparent second-text active">
-                    <i class="fa-solid fa-door-open me-2"></i>Quản lý phòng</a>
+                    <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
                 <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
                 <a href="./quanlyphim.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
@@ -44,7 +44,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class="d-flex align-items-center">
                     <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
-                    <h2 class="fs-2 m-0">Quản lý phòng</h2>
+                    <h2 class="fs-2 m-0">Quản lý ca</h2>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -58,21 +58,30 @@
 
             <div class="container-fluid px-4">
                 <div class="row my-5">
-                    <h3 class="fs-4 mb-3">Các phòng chiếu phim
+                    <h3 class="fs-4 mb-3">Các ca chiếu phim
                     </h3>
                     <form class="rounded bg-light shadow fs-4 mb-3">
                         
-                        <div class="form-group">
-                          <label for="">Mã phòng</label>
-                          <input type="text" class="form-control" id="name">
-                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Giờ:</label>
+                            </div>
+                            <div class="col">
+                              <input type="number" min="0" max="24" class="form-control" onchange="kiemtragio()" id="time1">
+                            </div>
+                            <div class="col">
+                                <label for="">Phút:</label>
+                            </div>                            <div class="col">
+                              <input type="number" min="0" max="59" class="form-control" onchange="kiemtraphut()" id="time2">
+                            </div>
+                          </div>
                         <div class="form-group">
                           <label for="">Mã phim</label>
                           <select class="form-control" id="name2">
                           </select>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary m-2" onclick="add()">+Thêm phòng</button>
+                            <button type="submit" class="btn btn-primary m-2" onclick="add()">+Thêm ca</button>
                             <button type="submit" class="btn btn-primary m-2" onclick="edit()">+Update</button>
                         </div>
                       </form>
@@ -96,15 +105,33 @@
             //Cap nhat vao bang khi form load
             loadb();
             loadcb();
+            var a=document.getElementById('time2');
         });
-        
+        function kiemtragio(){
+            var a=document.getElementById('time1');
+            if(a.value<0){
+                a.value=0;
+            }
+            else if(a.value>24){
+                a.value=24;
+            }
+        }
+        function kiemtraphut(){
+            var a=document.getElementById('time2');
+            if(a.value<0){
+                a.value=0;
+            }
+            else if(a.value>60){
+                a.value=59;
+            } 
+        }
         function loadb(){
-            let listRoom=localStorage.getItem("list-room") ? JSON.parse(localStorage.getItem("list-room")):[] ;
+            let listCa=localStorage.getItem("list-ca") ? JSON.parse(localStorage.getItem("list-ca")):[] ;
             let html=``;
-            listRoom.map((value,index)=>{
+            listCa.map((value,index)=>{
                     html+=`
                     <tr>
-                        <td>${value.maphong}</td>
+                        <td>${value.maca}</td>
                         <td>${value.maph}</td>
                     </tr>
                     `;
@@ -112,7 +139,7 @@
                 document.getElementById('tb1').innerHTML=`
                 <thead>
                     <tr>
-                        <th scope="col">Mã phòng</th>
+                        <th scope="col">Ca</th>
                         <th scope="col">Mã phim</th>
                     </tr>
                 </thead>
@@ -122,47 +149,61 @@
                 `;
         }
         function add(){
+            //trung ca
 
-
-            var maphong=document.getElementById('name').value;
-            let listRoom=localStorage.getItem("list-room") ? JSON.parse(localStorage.getItem("list-room")):[] ;
-            if(listRoom.length==4){
-                alert("Chỉ có tối đa 4 phòng");
+            var maca1=document.getElementById('time1').value;
+            var maca2=document.getElementById('time2').value;
+            if(maca1<10){
+                maca1="0"+maca1;
+            }
+            if(maca2<10){
+                maca2="0"+maca2;
+            }
+            var maca=maca1+":"+maca2;
+            let listCa=localStorage.getItem("list-ca") ? JSON.parse(localStorage.getItem("list-ca")):[] ;
+            
+            var trung=0;
+            listCa.map((value,index)=>{
+                if(value.maca==maca){
+                trung++;
+                }
+            });
+            if(trung>0){
+                alert("Ca đã tồn tại");
             }
             else{
-                var trung=0;
-                listRoom.map((value,index)=>{
-                    if(value.maphong==maphong){
-                    trung++;
-                    }
+                listCa.push({
+                    maca:maca,
+                    maph: null,
                 });
-                if(trung>0){
-                    alert("Mã phòng đã tồn tại");
-                }
-                else{
-                    listRoom.push({
-                        maphong:maphong,
-                        maph: null,
-                    });
-                    localStorage.setItem("list-room",JSON.stringify(listRoom));
-                    loadb();
-                }
-            
+                localStorage.setItem("list-ca",JSON.stringify(listCa));
+                loadb();
             }
+            
+            
             
         }
         function edit(){
-            var name=document.getElementById('name').value;
+            var maca1=document.getElementById('time1').value;
+            var maca2=document.getElementById('time2').value;
+            if(maca1<10){
+                maca1="0"+maca1;
+            }
+            if(maca2<10){
+                maca2="0"+maca2;
+            }
+            var maca=maca1+":"+maca2;
+
             var select=document.getElementById('name2');
             var name2=select.options[select.selectedIndex].value;
-            let listRoom=localStorage.getItem("list-room") ? JSON.parse(localStorage.getItem("list-room")):[] ;
-            listRoom.map((value,index)=>{
-            if(value.maphong==name){
-                listRoom[index]={
-                    maphong:name,
+            let listCa=localStorage.getItem("list-ca") ? JSON.parse(localStorage.getItem("list-ca")):[] ;
+            listCa.map((value,index)=>{
+            if(value.maca==maca){
+                listCa[index]={
+                    maca:maca,
                     maph: name2,
                 }
-                localStorage.setItem("list-room",JSON.stringify(listRoom));
+                localStorage.setItem("list-ca",JSON.stringify(listCa));
             }
         });
             loadb();

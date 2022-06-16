@@ -22,7 +22,7 @@
                 <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="./quanlyphong.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fa-solid fa-door-open me-2"></i>Quản lý phòng</a>
+                    <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
                 <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
                 <a href="./quanlyphim.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
@@ -148,7 +148,7 @@
         function del(index){
             
             
-            if (confirm('Bạn có chắc muốn xóa không?')) {
+            if (confirm('Bạn có chắc muốn xóa không?. Xóa khách sẽ xóa cả vé của khách!')) {
 
             //1. lay ra de xoa
             let listUserNone=localStorage.getItem("list-user-none") ? JSON.parse(localStorage.getItem("list-user-none")):[] ;
@@ -166,6 +166,8 @@
                     listVe.splice(index,1);
                 }
             });
+            localStorage.setItem("list-ve",JSON.stringify(listVe));
+
         }
   
         }

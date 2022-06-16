@@ -22,7 +22,7 @@
               <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                       class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
               <a href="./quanlyphong.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                  <i class="fa-solid fa-door-open me-2"></i>Quản lý phòng</a>
+                  <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
               <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                   <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
               <a href="./quanlyphim.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
@@ -59,8 +59,7 @@
                     <form class="rounded bg-light shadow">
                         <div class="form-group">
                           <label for="">Tên phim</label>
-                          <select class="form-control">
-                            <option>Default select</option>
+                          <select class="form-control" id="name">
                           </select>
                         </div>
                         <div class="form-group">
@@ -106,8 +105,7 @@
                     <form class="rounded bg-light shadow">
                         <div class="form-group">
                           <label for="">Tên phim</label>
-                          <select class="form-control">
-                            <option>Default select</option>
+                          <select class="form-control" id="name2">
                           </select>
                         </div>
                         <div class="form-group">
@@ -152,8 +150,7 @@
                     <form class="rounded bg-light shadow">
                         <div class="form-group">
                           <label for="">Tên phim</label>
-                          <select class="form-control">
-                            <option>Default select</option>
+                          <select class="form-control" id="name3">
                           </select>
                         </div>
                         <div class="form-group">
@@ -198,8 +195,7 @@
                     <form class="rounded bg-light shadow">
                         <div class="form-group">
                           <label for="">Tên phim</label>
-                          <select class="form-control">
-                            <option>Default select</option>
+                          <select class="form-control" id="name4">
                           </select>
                         </div>
                         <div class="form-group">
@@ -251,6 +247,38 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     
     <script>
+      window.addEventListener('load', (event) => {
+            //Cap nhat vao bang khi form load
+            loadcb();
+        });
+      function loadcb(){
+            let listFilm=localStorage.getItem("list-film") ? JSON.parse(localStorage.getItem("list-film")):[] ;
+            let html=`<option>null</option>`;
+
+            listFilm.map((value,index)=>{
+                    html+=`
+                    <option>${value.tenph}</option>
+                    `;
+            });
+
+            var select=document.getElementById('name');
+            select.innerHTML=`
+            ${html}
+            `
+            var select=document.getElementById('name2');
+            select.innerHTML=`
+            ${html}
+            `
+            var select=document.getElementById('name3');
+            select.innerHTML=`
+            ${html}
+            `
+            var select=document.getElementById('name4');
+            select.innerHTML=`
+            ${html}
+            `
+        }
+        //if ten phim ==null
         var el = document.getElementById("wrapper");
         var toggleButton = document.getElementById("menu-toggle");
 
