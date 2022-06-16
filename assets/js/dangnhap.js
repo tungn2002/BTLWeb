@@ -108,6 +108,7 @@ function login(){
                     gen:value.gen,
                     khu:value.khu,
                     rap:value.rap,
+                    avatar:value.avatar,
                     login:"logging",
                 }
                 localStorage.setItem("list-user",JSON.stringify(listUser));

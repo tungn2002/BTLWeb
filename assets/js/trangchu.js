@@ -14,6 +14,7 @@ window.addEventListener("load",function(){
                 gen:value.gen,
                 khu:value.khu,
                 rap:value.rap,
+                avatar:value.avatar,
                 login:null
             }
             localStorage.setItem("list-user",JSON.stringify(listUser));
