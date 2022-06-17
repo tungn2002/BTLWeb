@@ -10,9 +10,9 @@
 
     <!--Icon-->
     <link rel="stylesheet" href="D:\html\BTL\Thong_Tin_Chung\assets\css">
-    <title>Thông tin chung</title>
+    <title>Chi tiết tài khoản</title>
 </head>
-<body>
+<body onload="load()">
     <div class="main">
         <div class="c1">
             <div class="qc"></div>
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="c5_2">
+            <div class="c5_2" id="c5_22">
                 <div class="page">
                     <h1>Thay đổi thông tin</h1>
                 </div>
@@ -141,8 +141,11 @@
                 </div>
                 
                 <div class="c5_footer1">
-                    <input type="checkbox" onclick="">
-                    <label for="">Tôi muốn thay đổi mặt khẩu</label>
+                    <div class="c5_pass">
+                        <label for="" onclick="changePass()">Đổi mật khẩu</label>
+                    </div>
+                    
+                    <div id="add"></div>
                 </div>
                 
                 <div class="c5_footer2">
@@ -158,7 +161,7 @@
                         </select>
                     </div>
                     <div class="save">
-                        <button type="submit" title="Lưu lại" class="button">Lưu lại</button>
+                        <button type="submit" title="Lưu lại" class="button" onclick="save()">Lưu lại</button>
                     </div>
                 </div>
             </div>

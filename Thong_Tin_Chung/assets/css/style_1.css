@@ -168,16 +168,33 @@
     text-align: center;
     float: right;
     width: 100px;
-    height: 30px;
-    background-color: #666;
+    height: 25px;
+    background-color: rgb(134, 0, 0);
     padding-top: 5px;
 }
 .main .c5 .c5_2 .c5_2_2 .c5_box .box_content .box_title a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .main .c5 .c5_2 .c5_2_2 .c5_box .box_content .box_item{
-    margin-left: 10px;
+    margin-top: 10px;
+    margin-left: 3px;
+}
+.main .c5 .c5_2 .c5_2_2 .c5_form .input_box .input_text{
+    display: none;
+}
+.main .c5 .c5_2 .c5_2_2 .c5_form .input_box .lable{
+    background-color: #333;
+    height: 30px;
+    width: 75px;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+.main .c5 .c5_2 .c5_2_2 .c5_form .input_box #loadAvatar .img{
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .main .c10{

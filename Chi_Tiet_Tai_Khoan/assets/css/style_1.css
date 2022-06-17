@@ -168,6 +168,20 @@
 .main .c5 .c5_2 .c5_footer1{
     padding-top: 10px;
 }
+.main .c5 .c5_2 .c5_footer1 .c5_pass{
+    background-color: rgb(107, 107, 107);
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    border-radius: 15%;
+    border: 1px solid black;
+}
+.main .c5 .c5_2 .c5_footer1 #add{
+    display: flex;
+}
+.main .c5 .c5_2 .c5_footer1 #add div{
+    padding: 10px;
+}
 .main .c5 .c5_2 .c5_footer2{
     padding-top: 10px;
 }

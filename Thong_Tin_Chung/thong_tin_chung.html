@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="D:\html\BTL\Thong_Tin_Chung\assets\css">
     <title>Thông tin chung</title>
 </head>
-<body>
+<body onload="loadding()">
     <div class="main">
         <div class="c1">
             <div class="qc"></div>
@@ -85,19 +85,19 @@
                 <div class="c5_2_2">
                     <div class="c5_form">
                         <form action="" method="post" enctype="multipart/form-data">
-                            <div class="img">
-                                <label id="filetoupload" for="filetoupload">
-                                    <img src="https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/icon-profile-cgv.png" height="120" width="120" alt="AvatarProfile">
-                                </label>
-                            </div>
                             <div class="input_box">
-                                <input type="file" name="avatar" title="Avatar" id="avatar" class="input_text">
+                                <div id="loadAvatar">
+                                    <img src="https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/icon-profile-cgv.png" height="120" width="120" alt="AvatarProfile" class="img">
+                                </div>
+                                
+                                <input type="file" name="avatar" title="Avatar" class="input_text" id="avatar">
+
+                                <div class="lable">
+                                    <label for="avatar" class="btnphoto">thay đổi</label>
+                                </div>
+                                
                             </div>
-                            <div class="button_img">
-                                <button type="button" id="btnchange">
-                                    <p>Thay đổi</p>
-                                </button>
-                            </div>
+                            
                         </form>
                     </div>
     
@@ -114,13 +114,14 @@
                         </div>
                         <div class="box_content">
                             <div class="box_title">
-                                <a href="http://127.0.0.1:5500/html/BTL/Chi_Tiet_Tai_Khoan/chi_tiet_tai_khoan.html">Thay đổi</a>
+                                <a href="http://127.0.0.1:5500/html/BTL/Chi_Tiet_Tai_Khoan/chi_tiet_tai_khoan.html">Đổi thông tin</a>
                             </div>
                             <div class="box_item">
-                                <p>Trường</p>
-                                <p>Trường</p>
-                                <p>Trường</p>
-                                <p>Trường</p>
+                                <p>Mã khách hàng: 2051063856</p>
+                                <p>Họ và tên: Bùi Văn Trường</p>
+                                <p>Email: buitruongar13@gmail.com</p>
+                                <p>Tên đăng nhập: Buitruong</p>
+                                <p>Số điện thoại: 0362685821</p>
                             </div>
                         </div>
                     </div>
