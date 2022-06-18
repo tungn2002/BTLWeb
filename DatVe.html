@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--PC-->
+    <link rel="stylesheet" media="(min-width: 768px)" href="./assets/css/DatVe.css" />
+    <!--Mobile-->
+    <link rel="stylesheet" media="(max-width: 767.98px)" href="./style_2.html" />
+
+    <!-- Thư viện jqueri -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+    <script language="javascript" src="../assets/js/DatVe.js"></script>
+    <!--Icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <title>THẾ GIỚI KHỦNG LONG: Đặt Vé</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="c1">
+            <div class="qc"></div>
+        </div>
+        <div class="c2">
+            <div class="lc">
+                <ul>
+                    <li>
+                        <a href="../BTLweb/tuyendung.html"><i class="fa-solid fa-users"></i> TUYỂN DỤNG</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-newspaper"></i> TIN MỚI VÀ ƯU ĐÃI</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-ticket"></i> VÉ CỦA TÔI</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-user"></i> ĐĂNG NHẬP/ĐĂNG KÝ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="c3">
+            <div class="tc">
+                <div class="chu">
+                    <ul>
+                        <li id="ticket">
+                            <a href="./hompage.html"><img src="./assets/img/cgvlogo.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href=""> PHIM</a>
+                            <ul class="submenu">
+                                <li><a href="">Phim đang chiếu</a></li>
+                                <li><a href="">Phim sắp chiếu</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""> RẠP CGV</a>
+                            <ul class="submenu">
+                                <li><a href="">Tất cả các rạp</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""> THÀNH VIÊN</a>
+                            <ul class="submenu">
+                                <li><a href="">Tài khoản CGV</a></li>
+                                <li><a href="">Quyền lợi</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""> CULTUREPLEX</a>
+                            <ul class="submenu">
+                                <li><a href="">Sự kiện và vé nhóm</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="Content_Sub_Menu">
+            <i class="fa fa-home" aria-hidden="true"></i> &nbsp;&nbsp;
+            <i class="fa fa-angle-right" aria-hidden="true"></i> &nbsp;&nbsp;
+            <a href="#" title="Trang Chu">ĐẶT VÉ: THẾ GIỚI KHỦNG LONG: LÃNH ĐỊA</a>
+        </div>
+        <div class="c4">
+            <div class="Content">
+                <div class="Describe">
+                    <ul class="Choose_Day">
+                        <li class="Curent" id="day12" onclick="myFunction12()">
+                            <div class="day">
+                                <span title="123">06</span>
+                                <em>Sat</em>
+                                <strong>12</strong>
+                            </div>
+                        </li>
+                        <li class="Curent" id="day13" onclick="myFunction13()">
+                            <div class="day">
+                                <span>06</span>
+                                <em>Sat</em>
+                                <strong>13</strong>
+                            </div>
+                        </li>
+                        <li class="Curent" id="day14" onclick="myFunction14()">
+                            <div class="day">
+                                <span>06</span>
+                                <em>Sun</em>
+                                <strong>14</strong>
+                            </div>
+                        </li>
+                        <li class="Curent" id="day15" onclick="myFunction15()">
+                            <div class="day">
+                                <span>06</span>
+                                <em>Mon</em>
+                                <strong>15</strong>
+                            </div>
+                        </li>
+                        <li class="Curent" id="day16" onclick="myFunction16()">
+                            <div class="day">
+                                <span>06</span>
+                                <em>Tue</em>
+                                <strong>16</strong>
+                            </div>
+                        </li>
+                        <li class="Curent" id="day17" onclick="myFunction17()">
+                            <div class="day">
+                                <span>06</span>
+                                <em>Wed</em>
+                                <strong>17</strong>
+                            </div>
+                        </li>
+                        <li class="Curent" id="day18" onclick="myFunction18()">
+                            <div class="day">
+                                <span>06</span>
+                                <em>Thu</em>
+                                <strong>18</strong>
+                            </div>
+                        </li>
+                        <li class="Curent" id="day19" onclick="myFunction19()">
+                            <div class="day">
+                                <span>06</span>
+                                <em>Fri</em>
+                                <strong>19</strong>
+                            </div>
+                        </li>
+                        <li class="Curent" id="day20" onclick="myFunction20()">
+                            <div class="day">
+                                <span>06</span>
+                                <em>Sat</em>
+                                <strong>20</strong>
+                            </div>
+                        </li>
+                        <li class="Curent" id="day21" onclick="myFunction21()">
+                            <div class="day">
+                                <span>06</span>
+                                <em>Sun</em>
+                                <strong>21</strong>
+                            </div>
+                        </li>
+                        <li class="Curent" id="day22" onclick="myFunction22()">
+                            <div class="day">
+                                <span>06</span>
+                                <em>Mon</em>
+                                <strong>22</strong>
+                            </div>
+                        </li>
+                        <li class="Curent" id="day23" onclick="myFunction23()">
+                            <div class="day">
+                                <span>06</span>
+                                <em>Tue</em>
+                                <strong>23</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Place">
+                    <ul class="Choose_Place">
+                        <li class="Curent" id="HCM" onclick="myFunctionHCM()">
+                            <span>Hồ Chí Minh</span>
+                        </li>
+                        <li class="Curent" id="HN" onclick="myFunctionHN()">
+                            <span>Hà Nội</span>
+                        </li>
+                        <li class="Curent" id="DN" onclick="myFunctionDN()">
+                            <span>Đà Nẵng</span>
+                        </li>
+                        <li class="Curent" id="CT" onclick="myFunctionCT()">
+                            <span>Cần Thơ</span>
+                        </li>
+                        <li class="Curent" id="DNai" onclick="myFunctionDNai()">
+                            <span>Đồng Nai</span>
+                        </li>
+                        <li class="Curent" id="HP" onclick="myFunctionHP()">
+                            <span>Hải Phòng</span>
+                        </li>
+                        <li class="Curent" id="QN" onclick="myFunctionQN()">
+                            <span>Quảng Ninh</span>
+                        </li>
+                        <li class="Curent" id="BR" onclick="myFunctionBR()">
+                            <span>Bà Rịa Vũng Tàu</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Sub_Title">
+                    <ul class="Choose_Sub_Title">
+                        <li class="Curent">
+                            <span>2D Phụ Đề Việt</span>
+                        </li>
+                        <li class="Curent">
+                            <span>2D Phụ Đề Hàn & Việt</span>
+                        </li>
+                        <li class="Curent">
+                            <span>IMax2D Phụ Đề Việt</span>
+                        </li>
+                        <li class="Curent">
+                            <span>Imax3D Phụ Đề Việt</span>
+                        </li>
+                        <li class="Curent">
+                            <span>4Dx3D Phụ Đề Việt</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Time">
+                    <ul class="Choose_Time">
+                        <li class="Curent">
+                            <span>CGV Hùng Vương Plaza</span> <br>
+                            <b>Rạp 2D</b> <br>
+                            <ul class="Sub_Choose_Time">
+                                <li class="Sub_Curent">
+                                    19:15 PM
+                                </li>
+                                <li class="Sub_Curent">
+                                    29:15 PM
+                                </li>
+                            </ul>
+                        </li>
+                        <br>
+                        <br>
+                        <br>
+                        <hr>
+                        <li class="Curent">
+                            <span>CGV Hùng Vương Plaza</span> <br>
+                            <b>Rạp 2D</b> <br>
+                            <ul class="Sub_Choose_Time">
+                                <li class="Sub_Curent">
+                                    19:15 PM
+                                </li>
+                                <li class="Sub_Curent">
+                                    29:15 PM
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="c5"></div>
+        <hr />
+        <div class="c6">
+            <div class="tt">
+                <div>
+                    <p>
+                        <b>CGV Việt Nam</b><br />Giới Thiệu<br />Tiện Ích Online<br />Thẻ Quà Tặng<br />Tuyển Dụng<br />Liên Hệ Quảng Cáo CGV
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <b>Điều khoản sử dụng</b><br /> Điều Khoản Chung <br /> Điều Khoản Giao Dịch <br /> Chính Sách Thanh Toán <br /> Chính Sách Bảo Mật <br /> Câu Hỏi Thường Gặp
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <b>Kết nối với chúng tôi</b> <br />
+                        <a href=""><img src="./assets/img/fb.png" alt="" /></a>
+                        <a href=""><img src="./assets/img/yt.png" alt="" /></a>
+                        <a href=""><img src="./assets/img/it.png" alt="" /></a>
+                        <a href=""><img src="./assets/img/zl.png" alt="" /></a>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <b>Chăm sóc khách hàng</b><br /> Hotline: 1900 6017 <br /> Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày bao gồm cả Lễ Tết)
+                        <br /> Email hỗ trợ: hoidap@cgv.vn
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="c7">
+            <div class="ttt">
+                <div id="lg2"><img src="./assets/img/logo2.png" alt="" /></div>
+                <div id="ttin">
+                    <b>CÔNG TY TNHH CJ CGV VIETNAM</b><br /> Giấy CNĐKDN: 0303675393, đăng ký lần đầu ngày 31/7/2008, đăng ký thay đổi lần thứ 5 ngày 14/10/2015, cấp bởi <br />Sở KHĐT thành phố Hồ Chí Minh. <br /> Địa Chỉ: Tầng 2, Rivera Park Saigon -
+                    Số 7/28 Thành Thái, P.14, Q.10, TPHCM. <br /> Hotline: 1900 6017 <br /> COPYRIGHT 2017 CJ CGV. All RIGHTS RESERVED .
+                </div>
+            </div>
+        </div>
+        <div class="c8"></div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/DatVe.js"></script>
+</body>
+
+</html>
