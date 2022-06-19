@@ -19,9 +19,9 @@
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold border-bottom">
                 <i class="fa-solid fa-screwdriver-wrench me-2"></i>ADMIN</div>
             <div class="list-group list-group-flush my-3">
-                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-                <a href="./quanlyca.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                <a href="./quanlyca.html" class="list-group-item list-group-item-action bg-transparent second-text active">
                     <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
                 <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
@@ -81,7 +81,6 @@
                           </select>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary m-2" onclick="add()">+Thêm ca</button>
                             <button type="submit" class="btn btn-primary m-2" onclick="edit()">+Update</button>
                         </div>
                       </form>
@@ -149,45 +148,17 @@
                 </tbody>
                 `;
         }
-        function add(){
-            //trung ca
 
-            var maca1=document.getElementById('time1').value;
-            var maca2=document.getElementById('time2').value;
-            if(maca1<10){
-                maca1="0"+maca1;
-            }
-            if(maca2<10){
-                maca2="0"+maca2;
-            }
-            var maca=maca1+":"+maca2;
-            let listCa=localStorage.getItem("list-ca") ? JSON.parse(localStorage.getItem("list-ca")):[] ;
-            
-            var trung=0;
-            listCa.map((value,index)=>{
-                if(value.maca==maca){
-                trung++;
-                }
-            });
-            if(trung>0){
-                alert("Ca đã tồn tại");
-            }
-            else{
-                listCa.push({
-                    maca:maca,
-                    maph: null,
-                });
-                localStorage.setItem("list-ca",JSON.stringify(listCa));
-                loadb();
-            }
-            
-            
-            
-        }
         function edit(){
             var maca1=document.getElementById('time1').value;
-            var maca2=document.getElementById('time2').value;
-            if(maca1<10){
+            var maca2=document.getElementById('time2').value; 
+            var select=document.getElementById('name2');
+            var name2=select.options[select.selectedIndex].value;
+            if(maca1=="" ||maca2==""){
+                alert("Phải nhập đủ thông tin");
+            }
+            else{
+                if(maca1<10){
                 maca1="0"+maca1;
             }
             if(maca2<10){
@@ -195,19 +166,19 @@
             }
             var maca=maca1+":"+maca2;
 
-            var select=document.getElementById('name2');
-            var name2=select.options[select.selectedIndex].value;
             let listCa=localStorage.getItem("list-ca") ? JSON.parse(localStorage.getItem("list-ca")):[] ;
             listCa.map((value,index)=>{
-            if(value.maca==maca){
-                listCa[index]={
-                    maca:maca,
-                    maph: name2,
+                if(value.maca==maca){
+                    listCa[index]={
+                        maca:maca,
+                        maph: name2,
+                    }
+                    localStorage.setItem("list-ca",JSON.stringify(listCa));
                 }
-                localStorage.setItem("list-ca",JSON.stringify(listCa));
-            }
-        });
+            });
             loadb();
+            }
+            
         }
         function loadcb(){
             let listFilm=localStorage.getItem("list-film") ? JSON.parse(localStorage.getItem("list-film")):[] ;
@@ -229,7 +200,7 @@
             if(listCa.length==0){
                 for(let i=8;i<=20;i+=2)
                 listCa.push({
-                    maca:i+":00",
+                    maca:(i<10) ? ("0"+i+":00"):(i+":00"),
                     maph: null,
                 });
                 localStorage.setItem("list-ca",JSON.stringify(listCa));

@@ -19,7 +19,7 @@
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold border-bottom">
                 <i class="fa-solid fa-screwdriver-wrench me-2"></i>ADMIN</div>
             <div class="list-group list-group-flush my-3">
-                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="./quanlyca.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
@@ -27,7 +27,7 @@
                     <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
                 <a href="./quanlyphim.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-file-video me-2"></i>Quản lý phim</a>
-                <a href="./quanlyve.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="./quanlyve.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                         class="fas fa-chart-line me-2"></i>Quản lý vé</a>
                 <a href="./quanlykhach.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-users me-2"></i>Quản lý khách hàng</a>
@@ -199,26 +199,32 @@
             var select2=document.getElementById('maghe');
             var maghe=select2.options[select2.selectedIndex].value;
 
-            let listVe=localStorage.getItem("list-ve") ? JSON.parse(localStorage.getItem("list-ve")):[] ;
-
-            var trung=0;
-            listVe.map((value,index)=>{
-                if(value.mave==mave){
-                    trung++;
-                }
-            });
-            if(trung>0){
-                alert("Mã vé đã tồn tại");
+            if(mave==""||makh==null||maghe==null){
+                alert("Phải nhập đủ thông tin");
             }
             else{
-                listVe.push({
-                    mave:mave,
-                    makh:makh,
-                    maghe:maghe,
+                let listVe=localStorage.getItem("list-ve") ? JSON.parse(localStorage.getItem("list-ve")):[] ;
+
+                var trung=0;
+                listVe.map((value,index)=>{
+                    if(value.mave==mave){
+                        trung++;
+                    }
                 });
-                localStorage.setItem("list-ve",JSON.stringify(listVe));
-                loadcbg();
-            } 
+                if(trung>0){
+                    alert("Mã vé đã tồn tại");
+                }
+                else{
+                    listVe.push({
+                        mave:mave,
+                        makh:makh,
+                        maghe:maghe,
+                    });
+                    localStorage.setItem("list-ve",JSON.stringify(listVe));
+                    loadcbg();
+                } 
+            }
+        
 
 
             

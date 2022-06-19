@@ -19,11 +19,11 @@
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold border-bottom">
                 <i class="fa-solid fa-screwdriver-wrench me-2"></i>ADMIN</div>
             <div class="list-group list-group-flush my-3">
-                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="./quanlyca.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
-                <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text active">
                     <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
                 <a href="./quanlyphim.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-file-video me-2"></i>Quản lý phim</a>
@@ -60,15 +60,23 @@
                 <div class="row my-5">
                     <h3 class="fs-4 mb-3">Ghế
                     </h3>
-                    
+                    <form class="rounded bg-light shadow fs-4 mb-3">
+                        <div class="form-group">
+                            <label for="">Mã ghế</label>
+                          <input type="text" id="name" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="">Giá ghế</label>
+                          <input type="number" id="name3" class="form-control" >
+                        </div>      
+                       
+                        <button id ="btn" class="btn btn-primary" onclick="edit()">Update</button>
+                      </form>
                     <div class="col">
                         <table class="table bg-white rounded shadow-sm  table-hover" id="tb1">
                             
                         </table>
-                    </div>
-                    <div class="d-grid d-md-block">
-                        <a class="btn btn-primary" href="./themghe.html" role="button">+Thêm ghế</a>
-                    </div>                
+                    </div>     
                 </div>
                 
             </div>
@@ -90,7 +98,6 @@
                         <td>${value.maghe}</td>
                         <td>${value.giaghe}</td>
                         <td>${value.maca}</td>
-                        <td><button type="button" class="btn btn-primary" onclick="del(${index})">Xóa</button></td>
                     </tr>
                     `;
             });
@@ -100,7 +107,6 @@
                         <th scope="col">Mã ghế</th>
                         <th scope="col">Giá ghế</th>
                         <th scope="col">Ca</th>
-                        <th scope="col">Tùy chỉnh</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -113,47 +119,50 @@
             loadfull();
             loadb();
         });
-        function del(index){
-            if (confirm('Bạn có chắc muốn xóa không?. Nếu xóa ghế sẽ cả vé đã đặt ghế')) {
-                
-                    //1. lay ra de xoa
-                    let listGhe=localStorage.getItem("list-ghe") ? JSON.parse(localStorage.getItem("list-ghe")):[] ;
-                    var a=listGhe[index].maghe;
-                    //2, xoa
-                    listGhe.splice(index,1);
-                    //3. day len local
-                    localStorage.setItem("list-ghe",JSON.stringify(listGhe));
-                    //loadlai
-                    //xoa ghe se xoa ve
-                    let listVe=localStorage.getItem("list-ve") ? JSON.parse(localStorage.getItem("list-ve")):[] ;
-                    listVe.map((value,index2)=>{
-                        if(value.maghe==a){
-                            listVe.splice(index2,1);
-                            
-                        }
-                    });
-                    localStorage.setItem("list-ve",JSON.stringify(listVe));
-                    loadb();
-                
-            }
-            
-        }
+
         function loadfull(){
             let listCa=localStorage.getItem("list-ca") ? JSON.parse(localStorage.getItem("list-ca")):[] ;
             let listGhe=localStorage.getItem("list-ghe") ? JSON.parse(localStorage.getItem("list-ghe")):[] ;
             if(listGhe.length==0){
+                var num=1;
                 listCa.map((value,index)=>{
                     for(let i=1;i<=16;i++){
                         listGhe.push({
-                        maghe:"A"+i,
+                        maghe:String.fromCharCode(num + 64)+i,
                         giaghe:100000,
                         maca:value.maca,
-                    });
+                        });
                     }
+                    num++;
                 });
                 localStorage.setItem("list-ghe",JSON.stringify(listGhe));
             }
             
+        }
+        function edit(){
+            var maghe=document.getElementById('name');
+            var giaghe=document.getElementById('name3');
+            if(maghe.value==""||giaghe.value==""){
+                alert("Phải nhập đủ thông tin");
+            }
+            else{
+                var trung=0;
+                let listGhe=localStorage.getItem("list-ghe") ? JSON.parse(localStorage.getItem("list-ghe")):[] ;
+                listGhe.map((value,index)=>{
+                    if(maghe.value==value.maghe){
+                        trung++;
+                        listGhe[index]={
+                            maghe:maghe.value,
+                            giaghe:giaghe.value,
+                            maca:value.maca
+                        }
+                        localStorage.setItem("list-ghe",JSON.stringify(listGhe));
+                    }
+                });
+                if(trung==0){
+                    alert("Mã ghế cần sửa không tồn tại.");
+                }
+            }
         }
         var el = document.getElementById("wrapper");
         var toggleButton = document.getElementById("menu-toggle");

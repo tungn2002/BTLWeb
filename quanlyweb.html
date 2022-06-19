@@ -19,7 +19,7 @@
           <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold border-bottom">
               <i class="fa-solid fa-screwdriver-wrench me-2"></i>ADMIN</div>
           <div class="list-group list-group-flush my-3">
-              <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+              <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                       class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
               <a href="./quanlyca.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                   <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
@@ -31,7 +31,7 @@
                       class="fas fa-chart-line me-2"></i>Quản lý vé</a>
               <a href="./quanlykhach.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                   <i class="fa-solid fa-users me-2"></i>Quản lý khách hàng</a>
-              <a href="./quanlyweb.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+              <a href="./quanlyweb.html" class="list-group-item list-group-item-action bg-transparent second-text active">
                   <i class="fa-solid fa-newspaper me-2"></i>Quản lý nội dung web</a>
               <a href="./hompage.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
                       class="fas fa-power-off me-2"></i>Đăng xuất</a>
@@ -57,184 +57,168 @@
                     <h3 class="fs-4 mb-3 m-2">Trang 1
                     </h3>
                     <form class="rounded bg-light shadow">
-                        <div class="form-group">
-                          <label for="">Tên phim</label>
-                          <select class="form-control" id="name">
-                          </select>
+                      <div class="form-group">
+                        <label for="">Tên phim</label>
+                        <select class="form-control" id="tenphim">
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="">Đạo diễn</label>
+                        <input type="text" class="form-control" id="daodien">
+                      </div>
+                      <div class="form-group">
+                          <label for="">Diễn viên</label>
+                          <input type="text" class="form-control" id="dienvien">
                         </div>
                         <div class="form-group">
-                          <label for="">Đạo diễn</label>
-                          <input type="text" class="form-control">
+                          <label for="">Thể loại</label>
+                          <input type="text" class="form-control" id="theloai">
                         </div>
                         <div class="form-group">
-                            <label for="">Diễn viên</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Thể loại</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Thời lượng</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Ngôn ngữ</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Rated</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Trailer</label>
-                            <input type="text" class="form-control">
-                          </div>
-                        <div class="form-group m-2">
-                            <label for="">Thêm ảnh phim</label>
-                            <input type="file" class="form-control-file" id="">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Mô tả sản phẩm</label>
-                            <textarea class="form-control" rows="3"></textarea>
-                          </div>
-                        <button type="submit" class="btn btn-primary m-2">Update</button>
+                          <label for="">Thời lượng</label>
+                          <input type="text" class="form-control" id="thoiluong">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Ngôn ngữ</label>
+                          <input type="text" class="form-control" id="ngonngu">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Rated</label>
+                          <input type="text" class="form-control" id="rated">
+                        </div>
+                      <div class="form-group m-2">
+                          <label for="">Thêm ảnh phim</label>
+                          <input type="file" class="form-control-file" id="anh">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Mô tả phim</label>
+                          <textarea class="form-control" rows="3" id="mota"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary m-2" onclick="edit()">Update</button>
                       </form>
                       <h3 class="fs-4 mb-3 m-2">Trang 2
                     </h3>
                     <form class="rounded bg-light shadow">
-                        <div class="form-group">
-                          <label for="">Tên phim</label>
-                          <select class="form-control" id="name2">
-                          </select>
+                      <div class="form-group">
+                        <label for="">Tên phim</label>
+                        <select class="form-control" id="tenphim2">
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="">Đạo diễn</label>
+                        <input type="text" class="form-control" id="daodien2">
+                      </div>
+                      <div class="form-group">
+                          <label for="">Diễn viên</label>
+                          <input type="text" class="form-control" id="dienvien2">
                         </div>
                         <div class="form-group">
-                          <label for="">Đạo diễn</label>
-                          <input type="text" class="form-control">
+                          <label for="">Thể loại</label>
+                          <input type="text" class="form-control" id="theloai2">
                         </div>
                         <div class="form-group">
-                            <label for="">Diễn viên</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Thể loại</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Thời lượng</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Ngôn ngữ</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Rated</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Trailer</label>
-                            <input type="text" class="form-control">
-                          </div>
-                        <div class="form-group m-2">
-                            <label for="">Thêm ảnh phim</label>
-                            <input type="file" class="form-control-file" id="">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Mô tả sản phẩm</label>
-                            <textarea class="form-control" rows="3"></textarea>
-                          </div>
-                        <button type="submit" class="btn btn-primary m-2">Update</button>
+                          <label for="">Thời lượng</label>
+                          <input type="text" class="form-control" id="thoiluong2">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Ngôn ngữ</label>
+                          <input type="text" class="form-control" id="ngonngu2">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Rated</label>
+                          <input type="text" class="form-control" id="rated2">
+                        </div>
+                      <div class="form-group m-2">
+                          <label for="">Thêm ảnh phim</label>
+                          <input type="file" class="form-control-file" id="anh2">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Mô tả phim</label>
+                          <textarea class="form-control" rows="3" id="mota2"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary m-2"  onclick="edit2()">Update</button>
                       </form><h3 class="fs-4 mb-3 m-2">Trang 3
                     </h3>
                     <form class="rounded bg-light shadow">
-                        <div class="form-group">
-                          <label for="">Tên phim</label>
-                          <select class="form-control" id="name3">
-                          </select>
+                      <div class="form-group">
+                        <label for="">Tên phim</label>
+                        <select class="form-control" id="tenphim3">
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="">Đạo diễn</label>
+                        <input type="text" class="form-control" id="daodien3">
+                      </div>
+                      <div class="form-group">
+                          <label for="">Diễn viên</label>
+                          <input type="text" class="form-control" id="dienvien3">
                         </div>
                         <div class="form-group">
-                          <label for="">Đạo diễn</label>
-                          <input type="text" class="form-control">
+                          <label for="">Thể loại</label>
+                          <input type="text" class="form-control" id="theloai3">
                         </div>
                         <div class="form-group">
-                            <label for="">Diễn viên</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Thể loại</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Thời lượng</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Ngôn ngữ</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Rated</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Trailer</label>
-                            <input type="text" class="form-control">
-                          </div>
-                        <div class="form-group m-2">
-                            <label for="">Thêm ảnh phim</label>
-                            <input type="file" class="form-control-file" id="">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Mô tả sản phẩm</label>
-                            <textarea class="form-control" rows="3"></textarea>
-                          </div>
-                        <button type="submit" class="btn btn-primary m-2">Update</button>
+                          <label for="">Thời lượng</label>
+                          <input type="text" class="form-control" id="thoiluong3">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Ngôn ngữ</label>
+                          <input type="text" class="form-control" id="ngonngu3">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Rated</label>
+                          <input type="text" class="form-control" id="rated3">
+                        </div>
+                      <div class="form-group m-2">
+                          <label for="">Thêm ảnh phim</label>
+                          <input type="file" class="form-control-file" id="anh3">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Mô tả phim</label>
+                          <textarea class="form-control" rows="3" id="mota3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary m-2" onclick="edit3()">Update</button>
                       </form><h3 class="fs-4 mb-3 m-2">Trang 4
                     </h3>
                     <form class="rounded bg-light shadow">
                         <div class="form-group">
                           <label for="">Tên phim</label>
-                          <select class="form-control" id="name4">
+                          <select class="form-control" id="tenphim4">
                           </select>
                         </div>
                         <div class="form-group">
                           <label for="">Đạo diễn</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" id="daodien4">
                         </div>
                         <div class="form-group">
                             <label for="">Diễn viên</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="dienvien4">
                           </div>
                           <div class="form-group">
                             <label for="">Thể loại</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="theloai4">
                           </div>
                           <div class="form-group">
                             <label for="">Thời lượng</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="thoiluong4">
                           </div>
                           <div class="form-group">
                             <label for="">Ngôn ngữ</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="ngonngu4">
                           </div>
                           <div class="form-group">
                             <label for="">Rated</label>
-                            <input type="text" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <label for="">Trailer</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="rated4">
                           </div>
                         <div class="form-group m-2">
                             <label for="">Thêm ảnh phim</label>
-                            <input type="file" class="form-control-file" id="">
+                            <input type="file" class="form-control-file" id="anh4">
                           </div>
                           <div class="form-group">
-                            <label for="">Mô tả sản phẩm</label>
-                            <textarea class="form-control" rows="3"></textarea>
+                            <label for="">Mô tả phim</label>
+                            <textarea class="form-control" rows="3" id="mota4"></textarea>
                           </div>
-                        <button type="submit" class="btn btn-primary m-2">Update</button>
+                        <button type="submit" class="btn btn-primary m-2" onclick="edit4()">Update</button>
                       </form>                         
                 </div>
             </div>
@@ -247,8 +231,35 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     
     <script>
+      //anh
+      var anh1=document.getElementById('anh');
+      var anh2=document.getElementById('anh2');
+      var anh3=document.getElementById('anh3');
+      var anh4=document.getElementById('anh4');
+      var luu1="";
+      var luu2="";
+      var luu3="";
+      var luu4="";
+      anh1.addEventListener('change', function(){
+        
+       luu1= "./assets/img/" + this.files[0].name;
+});
+anh2.addEventListener('change', function(){
+        
+        luu2= "./assets/img/" + this.files[0].name;
+ });
+ anh3.addEventListener('change', function(){
+        
+        luu3= "./assets/img/" + this.files[0].name;
+ });
+ anh4.addEventListener('change', function(){
+        
+        luu4= "./assets/img/" + this.files[0].name;
+ });
+//
       window.addEventListener('load', (event) => {
             //Cap nhat vao bang khi form load
+            loadFull();
             loadcb();
         });
       function loadcb(){
@@ -261,24 +272,193 @@
                     `;
             });
 
-            var select=document.getElementById('name');
+            var select=document.getElementById('tenphim');
             select.innerHTML=`
             ${html}
             `
-            var select=document.getElementById('name2');
-            select.innerHTML=`
+            alert
+            var select2=document.getElementById('tenphim2');
+            select2.innerHTML=`
             ${html}
             `
-            var select=document.getElementById('name3');
-            select.innerHTML=`
+            var select3=document.getElementById('tenphim3');
+            select3.innerHTML=`
             ${html}
             `
-            var select=document.getElementById('name4');
-            select.innerHTML=`
+            var select4=document.getElementById('tenphim4');
+            select4.innerHTML=`
             ${html}
             `
         }
         //if ten phim ==null
+        function edit(){//day len 4 trang
+          var tenphim=document.getElementById('tenphim').value;
+          var daodien=document.getElementById('daodien').value;
+          var dienvien=document.getElementById('dienvien').value;
+          var theloai=document.getElementById('theloai').value;
+          var thoiluong=document.getElementById('thoiluong').value;
+          var ngonngu=document.getElementById('ngonngu').value;
+          var rated=document.getElementById('rated').value;
+          var mota=document.getElementById('mota').value;
+          if(tenphim==null||daodien==""||dienvien==""||theloai==""||thoiluong==""||ngonngu==""||rated==""||luu1=="")
+          {
+            alert("Phải nhập đủ thông tin");
+          }
+          else{
+            let listTrang=localStorage.getItem("list-trang") ? JSON.parse(localStorage.getItem("list-trang")):[] ;
+          listTrang.map((value,index)=>{
+            if(value.matrang=='trang1')
+            {
+              listTrang[index]={
+                    matrang:value.matrang,
+                    tenphim:tenphim,
+                    daodien:daodien,
+                    dienvien:dienvien,
+                    theloai:theloai,
+                    thoiluong:thoiluong,
+                    ngonngu:ngonngu,
+                    rated:rated,
+                    anh:luu1,
+                    mota:mota,
+              }
+              localStorage.setItem("list-trang",JSON.stringify(listTrang));
+
+            }  
+          });
+          }
+          
+        }
+        function edit2(){//day len 4 trang
+          var tenphim=document.getElementById('tenphim2').value;
+          var daodien=document.getElementById('daodien2').value;
+          var dienvien=document.getElementById('dienvien2').value;
+          var theloai=document.getElementById('theloai2').value;
+          var thoiluong=document.getElementById('thoiluong2').value;
+          var ngonngu=document.getElementById('ngonngu2').value;
+          var rated=document.getElementById('rated2').value;
+       
+          var mota=document.getElementById('mota2').value;
+          if(tenphim==null||daodien==""||dienvien==""||theloai==""||thoiluong==""||ngonngu==""||rated==""||luu2=="")
+          {
+            alert("Phải nhập đủ thông tin");
+          }
+          else{
+          let listTrang=localStorage.getItem("list-trang") ? JSON.parse(localStorage.getItem("list-trang")):[] ;
+          listTrang.map((value,index)=>{
+            if(value.matrang=='trang2')
+            {
+              listTrang[index]={
+                    matrang:value.matrang,
+                    tenphim:tenphim,
+                    daodien:daodien,
+                    dienvien:dienvien,
+                    theloai:theloai,
+                    thoiluong:thoiluong,
+                    ngonngu:ngonngu,
+                    rated:rated,
+                    anh:luu2,
+                    mota:mota,
+              }
+              localStorage.setItem("list-trang",JSON.stringify(listTrang));
+
+            }  
+          });
+        }
+        }
+        function edit3(){//day len 4 trang
+          var tenphim=document.getElementById('tenphim3').value;
+          var daodien=document.getElementById('daodien3').value;
+          var dienvien=document.getElementById('dienvien3').value;
+          var theloai=document.getElementById('theloai3').value;
+          var thoiluong=document.getElementById('thoiluong3').value;
+          var ngonngu=document.getElementById('ngonngu3').value;
+          var rated=document.getElementById('rated3').value;
+         
+          var mota=document.getElementById('mota3').value;
+          if(tenphim==null||daodien==""||dienvien==""||theloai==""||thoiluong==""||ngonngu==""||rated==""||luu3=="")
+          {
+            alert("Phải nhập đủ thông tin");
+          }
+          else{
+          let listTrang=localStorage.getItem("list-trang") ? JSON.parse(localStorage.getItem("list-trang")):[] ;
+          listTrang.map((value,index)=>{
+            if(value.matrang=='trang3')
+            {
+              listTrang[index]={
+                    matrang:value.matrang,
+                    tenphim:tenphim,
+                    daodien:daodien,
+                    dienvien:dienvien,
+                    theloai:theloai,
+                    thoiluong:thoiluong,
+                    ngonngu:ngonngu,
+                    rated:rated,
+                    anh:luu3,
+                    mota:mota,
+              }
+              localStorage.setItem("list-trang",JSON.stringify(listTrang));
+
+            }  
+          });
+        }
+        }
+        function edit4(){//day len 4 trang
+          var tenphim=document.getElementById('tenphim4').value;
+          var daodien=document.getElementById('daodien4').value;
+          var dienvien=document.getElementById('dienvien4').value;
+          var theloai=document.getElementById('theloai4').value;
+          var thoiluong=document.getElementById('thoiluong4').value;
+          var ngonngu=document.getElementById('ngonngu4').value;
+          var rated=document.getElementById('rated4').value;
+    
+          var mota=document.getElementById('mota4').value;
+          if(tenphim==null||daodien==""||dienvien==""||theloai==""||thoiluong==""||ngonngu==""||rated==""||luu4=="")
+          {
+            alert("Phải nhập đủ thông tin");
+          }
+          else{
+          let listTrang=localStorage.getItem("list-trang") ? JSON.parse(localStorage.getItem("list-trang")):[] ;
+          listTrang.map((value,index)=>{
+            if(value.matrang=='matrang4')
+            {
+              listTrang[index]={
+                matrang:value.matrang,
+                tenphim:tenphim,
+                daodien:daodien,
+                dienvien:dienvien,
+                theloai:theloai,
+                thoiluong:thoiluong,
+                ngonngu:ngonngu,
+                rated:rated,
+                anh:luu4,
+                mota:mota,
+              }
+              localStorage.setItem("list-trang",JSON.stringify(listTrang));
+
+            }  
+          });
+        }
+        }
+        function loadFull(){
+          let listTrang=localStorage.getItem("list-trang") ? JSON.parse(localStorage.getItem("list-trang")):[] ;
+          if(listTrang.length==0){
+            for(let i=1;i<=4;i++){
+              listTrang.push({
+                    matrang:"trang"+i,
+                    tenphim:"",
+                    daodien:"",
+                    dienvien:"",
+                    theloai:"",
+                    thoiluong:"",
+                    ngonngu:"",
+                    rated:"",
+                    anh:"",
+                    mota:"",
+                    });
+            }                    
+            localStorage.setItem("list-trang",JSON.stringify(listTrang));
+          }
+        }
         var el = document.getElementById("wrapper");
         var toggleButton = document.getElementById("menu-toggle");
 

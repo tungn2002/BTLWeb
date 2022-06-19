@@ -1,4 +1,17 @@
 window.addEventListener("load",function(){
+    //kiemtradangnhap
+    listUser=localStorage.getItem("list-user") ? JSON.parse(localStorage.getItem("list-user")):[] ;
+    var kt=0;
+    listUser.map((value,index)=>{
+        if(value.login=='logging'){
+            kt++;
+        }
+    });
+    if(kt==0){
+        this.alert("Phải đăng nhập trước.");
+        window.location.href="log.html";    
+    }
+    //
     const slider=document.querySelector(".slider");
     const sliderMain=document.querySelector(".slider-main");
     const sliderItem=document.querySelectorAll(".slider-item");
@@ -53,4 +66,5 @@ window.addEventListener("load",function(){
         dotItems[index].classList.add("active");
                 
     }
+    
 });

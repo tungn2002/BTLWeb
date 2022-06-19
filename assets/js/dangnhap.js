@@ -16,7 +16,7 @@ function signUp(){
         if(value.email==email){
             trung++;
         }
-    })
+    });
     if( trung==0){
         var username = document.getElementById('username').value;
         var phonenumber = document.getElementById('phonenumber').value;
@@ -35,34 +35,41 @@ function signUp(){
         }
         var khu = document.getElementById('khu').value;
         var rap = document.getElementById('rap').value;
-        var accept = document.getElementById('accept');
-        if(accept.checked){
-                //tranh ghi de 
-            //add
-            listUser=localStorage.getItem("list-user") ? JSON.parse(localStorage.getItem("list-user")):[] ;
-            //
-            listUser.push({
-                makh:makeid(),
-                username : username,
-                email :email,
-                phonenumber:phonenumber,
-                pass:pass,
-                day:day,
-                month:month,
-                year:year,
-                gen:gen,
-                khu:khu,
-                rap:rap,
-                avatar:null,
-                login:null,
-            })
-            //day mang vao local
-            localStorage.setItem("list-user",JSON.stringify(listUser));
-            //
-            alert("Đăng ký thành công");
+        if(username=="" ||phonenumber=="" ||pass==""||day=="Ngày"|| month=="Tháng"||year=="Năm"||(gen1.checked==false &&gen2.checked==false)||khu==""||rap=="")
+        {
+        alert("Phải nhập đầy đủ thông tin");
+
         }
         else{
-            alert("Bạn phải chấp nhận điều khoản");
+            var accept = document.getElementById('accept');
+            if(accept.checked){
+            
+                listUser=localStorage.getItem("list-user") ? JSON.parse(localStorage.getItem("list-user")):[] ;
+                //
+                listUser.push({
+                    makh:makeid(),
+                    username : username,
+                    email :email,
+                    phonenumber:phonenumber,
+                    pass:pass,
+                    day:day,
+                    month:month,
+                    year:year,
+                    gen:gen,
+                    khu:khu,
+                    rap:rap,
+                    avatar:null,
+                    login:null,
+                })
+                //day mang vao local
+                localStorage.setItem("list-user",JSON.stringify(listUser));
+                //
+                alert("Đăng ký thành công");
+                
+            }
+            else{
+                alert("Bạn phải chấp nhận điều khoản");
+            } 
         }
     }
     else{
