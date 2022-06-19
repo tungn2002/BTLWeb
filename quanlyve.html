@@ -19,15 +19,15 @@
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold border-bottom">
                 <i class="fa-solid fa-screwdriver-wrench me-2"></i>ADMIN</div>
             <div class="list-group list-group-flush my-3">
-                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-                <a href="./quanlyphong.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                <a href="./quanlyca.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
                 <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
                 <a href="./quanlyphim.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-file-video me-2"></i>Quản lý phim</a>
-                <a href="./quanlyve.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                <a href="./quanlyve.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-chart-line me-2"></i>Quản lý vé</a>
                 <a href="./quanlykhach.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-users me-2"></i>Quản lý khách hàng</a>
@@ -66,10 +66,7 @@
                           <label for="">Mã vé</label>
                           <input type="text" class="form-control" id="mave">
                         </div>
-                        <div class="form-group">
-                            <label for="">Giá vé</label>
-                            <input type="number" class="form-control" id="giave">
-                          </div>
+
                         <div class="form-group">
                             <label for="">Mã khách hàng</label>
                             <select class="form-control" id="makh">
@@ -113,7 +110,6 @@
                     html+=`
                     <tr>
                         <td>${value.mave}</td>
-                        <td>${value.giave}</td>
                         <td>${value.makh}</td>
                         <td>${value.maghe}</td>
                         <td><button type="button" class="btn btn-primary" onclick="del(${index})">Xóa</button></td>
@@ -124,7 +120,6 @@
                 <thead>
                     <tr>
                         <th scope="col">Mã vé</th>
-                        <th scope="col">Giá vé</th>
                         <th scope="col">Mã khách hàng</th>
                         <th scope="col">Mã ghế</th>
                         <th scope="col">Tùy chỉnh</th>
@@ -197,7 +192,6 @@
         }
         function add(){
             var mave=document.getElementById('mave').value;
-            var giave=document.getElementById('giave').value;
 
             var select=document.getElementById('makh');
             var makh=select.options[select.selectedIndex].value;
@@ -219,7 +213,6 @@
             else{
                 listVe.push({
                     mave:mave,
-                    giave:giave,
                     makh:makh,
                     maghe:maghe,
                 });

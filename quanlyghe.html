@@ -19,11 +19,11 @@
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold border-bottom">
                 <i class="fa-solid fa-screwdriver-wrench me-2"></i>ADMIN</div>
             <div class="list-group list-group-flush my-3">
-                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-                <a href="./quanlyphong.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                <a href="./quanlyca.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
-                <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text active">
+                <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
                 <a href="./quanlyphim.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-file-video me-2"></i>Quản lý phim</a>
@@ -88,6 +88,7 @@
                     html+=`
                     <tr>
                         <td>${value.maghe}</td>
+                        <td>${value.giaghe}</td>
                         <td>${value.maca}</td>
                         <td><button type="button" class="btn btn-primary" onclick="del(${index})">Xóa</button></td>
                     </tr>
@@ -97,6 +98,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Mã ghế</th>
+                        <th scope="col">Giá ghế</th>
                         <th scope="col">Ca</th>
                         <th scope="col">Tùy chỉnh</th>
                     </tr>
@@ -108,6 +110,7 @@
         }
         window.addEventListener('load', (event) => {
             //Cap nhat vao bang khi form load
+            loadfull();
             loadb();
         });
         function del(index){
@@ -132,6 +135,23 @@
                     localStorage.setItem("list-ve",JSON.stringify(listVe));
                     loadb();
                 
+            }
+            
+        }
+        function loadfull(){
+            let listCa=localStorage.getItem("list-ca") ? JSON.parse(localStorage.getItem("list-ca")):[] ;
+            let listGhe=localStorage.getItem("list-ghe") ? JSON.parse(localStorage.getItem("list-ghe")):[] ;
+            if(listGhe.length==0){
+                listCa.map((value,index)=>{
+                    for(let i=1;i<=16;i++){
+                        listGhe.push({
+                        maghe:"A"+i,
+                        giaghe:100000,
+                        maca:value.maca,
+                    });
+                    }
+                });
+                localStorage.setItem("list-ghe",JSON.stringify(listGhe));
             }
             
         }

@@ -21,7 +21,7 @@
             <div class="list-group list-group-flush my-3">
                 <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-                <a href="./quanlyphong.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                <a href="./quanlyca.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
                 <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
@@ -63,7 +63,11 @@
                     <div class="form-group">
                         <label for="">Mã ghế</label>
                       <input type="text" id="name" class="form-control" >
-                    </div>   
+                    </div>
+                    <div class="form-group">
+                        <label for="">Giá ghế</label>
+                      <input type="number" id="name3" class="form-control" >
+                    </div>      
                     <div class="form-group">
                         <label for="">Mã ca</label>
                         <select class="form-control" id="name2">
@@ -89,11 +93,13 @@
         
         function add(){
             var maghe=document.getElementById('name').value;
+            var giaghe=document.getElementById('name3').value;
+
             var select=document.getElementById('name2');
             var maca=select.options[select.selectedIndex].value;
             let listGhe=localStorage.getItem("list-ghe") ? JSON.parse(localStorage.getItem("list-ghe")):[] ;
-            if(listGhe.length==40){
-            alert("Lớn nhất là 40 ghế.");
+            if(listGhe.length==200){
+            alert("Lớn nhất là 200 ghế.");
             }
             else{
                 var trung=0;
@@ -108,6 +114,7 @@
                 else{
                     listGhe.push({
                         maghe:maghe,
+                        giaghe:giaghe,
                         maca:maca,
                     });
                     localStorage.setItem("list-ghe",JSON.stringify(listGhe));

@@ -19,9 +19,9 @@
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold border-bottom">
                 <i class="fa-solid fa-screwdriver-wrench me-2"></i>ADMIN</div>
             <div class="list-group list-group-flush my-3">
-                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="./dashboard.html" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-                <a href="./quanlyphong.html" class="list-group-item list-group-item-action bg-transparent second-text active">
+                <a href="./quanlyca.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-door-open me-2"></i>Quản lý ca</a>
                 <a href="./quanlyghe.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-couch me-2"></i>Quản lý ghế</a>
@@ -103,6 +103,7 @@
     <script>
         window.addEventListener('load', (event) => {
             //Cap nhat vao bang khi form load
+            loadfull();
             loadb();
             loadcb();
             var a=document.getElementById('time2');
@@ -222,6 +223,17 @@
             select.innerHTML=`
             ${html}
             `
+        }
+        function loadfull(){
+            let listCa=localStorage.getItem("list-ca") ? JSON.parse(localStorage.getItem("list-ca")):[] ;
+            if(listCa.length==0){
+                for(let i=8;i<=20;i+=2)
+                listCa.push({
+                    maca:i+":00",
+                    maph: null,
+                });
+                localStorage.setItem("list-ca",JSON.stringify(listCa));
+            }
         }
         var el = document.getElementById("wrapper");
         var toggleButton = document.getElementById("menu-toggle");
