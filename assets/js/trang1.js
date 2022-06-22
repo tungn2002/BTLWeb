@@ -49,7 +49,7 @@ window.addEventListener('load', (event) => {
     
     <button class="wa2">Chi tiết</button>
 </div>`;
-nammm.innerHTML=`>${listTrang[0].mota}
+nammm.innerHTML=`${listTrang[0].mota}
 `;
 loadCa(listTrang[0].tenphim);
  });

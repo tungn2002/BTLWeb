@@ -407,7 +407,7 @@
 }
 @media(min-width: 480px)and (max-width:1024px){
     #NNN{
-        width: 388px;
+        width: 100vw;
     }
 }
 .main .Content_Sub_Menu .fa-angle-right {
@@ -643,7 +643,7 @@
 @media(min-width: 480px)and (max-width: 1024px){
     .main .Time .Choose_Time .Curent {
         list-style: none;
-        margin-top: 140px;
+        margin-top: 94px;
     }
 }
 .main .Time .Choose_Time .Curent span {
@@ -739,7 +739,7 @@
 @media(min-width: 480px)and (max-width: 1024px){
     .ghe  {
         display: flex;
-        margin-left: 1px;
+        margin-left: 53px;
         margin-top: 110px;
         
     }
