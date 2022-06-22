@@ -1,0 +1,882 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.main{
+    background-color:white;
+}
+@media (min-width:480px)and (max-width: 1024px){
+    .main {
+    background-color: white;      
+    }
+}
+
+.main .c1{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c1{
+        height: 9vw;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 480px) {
+    .main .c1{
+       height: 9vw;
+       
+    }
+}
+.main .c1 .qc{
+    width: 980px;
+    height: 80px;
+    background-image: url(../../assets/img/qcd.jpg);
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c1 .qc{
+        width: 100%;
+        height: 100%;        
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+@media (max-width: 480px) {
+    .main .c1 .qc{
+        width: 100%;
+        height: 100%;
+        background-image: url(../../assets/img/qcd.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+.main .c2{
+    height: 30px;
+    display: flex;
+    justify-content: center;    
+}
+@media (max-width: 480px) {
+    .main .c2{
+        height: 4vw;
+        display: flex;
+        justify-content: center;    
+    }
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c2{
+        height: 3vw;
+        display: flex;
+        justify-content: center;    
+    }
+}
+.main .c2 .lc{
+    height: 30px;
+    width: 980px;
+    display: flex;
+    justify-content: right;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c2 .lc{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 480px) {
+    .main .c2 .lc{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+.main .c2 .lc ul{
+    display: flex;
+}
+.main .c2 .lc ul li{
+    list-style-type: none;
+    margin-left: 30px;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c2 .lc ul li{
+        list-style-type: none;
+        margin-left: 20px;
+        overflow: hidden;
+    }
+}
+@media (max-width: 480px) {
+    .main .c2 .lc ul li{
+        list-style-type: none;
+        margin-left: 20px;
+        overflow: hidden;
+    }
+}
+.main .c2 .lc ul li a{
+   
+    line-height: 30px;  
+    text-decoration: none;
+    color: #666;
+    font-family: Verdana;
+    font-size: 15px;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c2 .lc ul li a{
+   
+        line-height: 1.5vw;  
+        text-decoration: none;
+        color: #666;
+        font-family: Verdana;
+        font-size:1.5vw;
+    }
+}
+@media (max-width: 480px) {
+    .main .c2 .lc ul li a{
+        line-height: 1.5vw;  
+        text-decoration: none;
+        color: #666;
+        font-family: Verdana;
+        font-size: 1.7vw;
+    }
+}
+.main .c3{
+    height: 119px;
+    display: flex;
+    justify-content: center;
+    background-image: url(../../assets/img/bg-top.png);
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c3{
+        height: 12vw;
+        display: flex;
+        justify-content: center;
+        background-image: url(../../assets/img/bg-top.png);
+        background-size: contain;
+    }
+}
+@media (max-width: 480px) {
+    .main .c3{
+        height: 12vw;
+        display: flex;
+        justify-content: center;
+        background-image: url(../../assets/img/bg-top.png);
+        background-size: contain;
+    }
+}
+.main .c3 .tc{
+    height: 119px;
+    width: 980px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c3 .tc{
+        height: 20vw;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media (max-width: 480px) {
+    .main .c3 .tc{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.main .c3 .tc .chu > ul{
+    display: flex;
+}
+
+.main .c3 .tc .chu ul li{
+    list-style-type: none;
+    height: 60px;
+    width: 150px;
+    position: relative;
+    top:18px;
+    font-family: Verdana;
+    font-weight: bold;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c3 .tc .chu ul li{
+        list-style-type: none;
+        height: 3em;
+        width: 20vw;
+        position: relative;
+        top:-1vw;
+        font-family: Verdana;
+        font-weight: bold;
+    }
+}
+@media (max-width: 480px) {
+    .main .c3 .tc .chu ul li{
+        list-style-type: none;
+        height: 4em;
+        width: 20vw;
+        position: relative;
+        top:-1vw;
+        font-family: Verdana;
+        font-weight: bold;
+        font-size: 0.5em;
+    }
+}
+.main .c3 .tc .chu ul li img{
+    height: 59px;
+    width: 136px; 
+    position: absolute;
+    bottom: 20px;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c3 .tc .chu ul li img{
+        height: 3em;
+        width: 6em; 
+        position: absolute;
+        bottom: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .main .c3 .tc .chu ul li img{
+        height: 4em;
+        width: 8em; 
+        position: absolute;
+        bottom: -5px;
+    }
+}
+
+.main .c3 .tc .chu ul li a{
+    text-decoration: none;
+    line-height: 60px;
+    color: black;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c3 .tc .chu ul li a{
+        text-decoration: none;
+        line-height: 2em;
+        color: black;
+        font-size: 1.8vw;
+    }
+}
+
+.main .c3 .tc .chu ul li .submenu{
+    position: absolute;
+    display: none;
+    padding:0px 20px;
+    border: 4px solid gray;
+    right: 4px;
+}
+@media (max-width: 480px) {
+    .main .c3 .tc .chu ul li .submenu{
+        position: absolute;
+        display: none;
+        padding:0px 1vw;
+        border: 3px solid gray;
+        right: 4px;
+        z-index: 10;
+    }
+}
+
+.main .c3 .tc .chu ul li .submenu li a{
+    color: white;
+    line-height: 5px;
+}
+@media (max-width: 480px) {
+    .main .c3 .tc .chu ul li .submenu li a{
+        color: white;
+        line-height: 5em;
+    }
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c3 .tc .chu ul li .submenu li a{
+        color: white;
+        line-height: 3em;
+    }
+}
+
+
+.main .c3 .tc .chu ul li .submenu li a:hover{
+    color:red;
+}
+
+.main .c3 .tc .chu ul li:hover .submenu{
+    display: block;
+    background-image: url(../../assets/img/bg_menu_hover.png);
+}
+
+.main .c10{
+    height: 30px;
+}
+
+@media (max-width: 480px) {
+    .main .c10{
+        height: 10px;
+    }
+}   
+
+.main .c11{
+    height: 190px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+@media(max-width: 480px){
+    .main .c11{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c11{
+        height: 18vw;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 480px) {
+    .main .c11{
+        height: 18vw;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+}   
+.main .c11 .tt{
+    height: 100%;
+    width: 980px;
+    display: flex;
+    justify-content: space-between;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c11 .tt{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 480px) {
+    .main .c11 .tt{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}   
+.main .c11 .tt div{
+    height: 100%;
+    width: 240px;
+}
+.main .c11 .tt div p{
+    margin-top: 30px;
+    font-family: Verdana;
+    font-size: 15px;
+    color:gray;
+    position: relative;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c11 .tt div p{
+        margin-top: 30px;
+        font-family: Verdana;
+        font-size: 1.5vw;
+        color:gray;
+        position: relative;
+    }
+}
+@media (max-width: 480px) {
+    .main .c11 .tt div p{
+        margin-top: 12px;
+        font-family: Verdana;
+        font-size: 1.6vw;
+        color:gray;
+        position: relative;
+    }
+    
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c11 .tt div p a img{
+        height: 3vw;
+        width: 3vw;
+    }
+}
+@media (max-width: 480px) {
+    .main .c11 .tt div p a img{
+        height: 3vw;
+        width: 3vw;
+    }
+    
+}      
+.main .c11 .tt div p a img:hover{
+    height: 60px;
+    width: 60px;
+}
+@media (max-width: 480px) {
+    .main .c11 .tt div p a img:hover{
+        height: 1.5em;
+        width: 1.5em;
+    }
+    
+}      
+.main .c11 .tt div p b{
+    color: #666;
+    position: absolute;
+    top:-10px;
+    
+}
+.main .c12{
+    height: 140px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c12{
+        height: 14vw;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 480px) {
+    .main .c12{
+        height: 14vw;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+}   
+.main .c12 .ttt{
+    height: 100%;
+    width: 980px;
+    display: flex;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c12 .ttt{
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+}
+@media (max-width: 480px) {
+    .main .c12 .ttt{
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+}   
+.main .c12 .ttt #lg2{
+    height: 100%;
+    width: 130px;
+    margin-top:50px;
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c12 .ttt #lg2 img{
+        height: 5vw;
+        width: 10vw;
+
+    }
+    .main .c12 .ttt #lg2{
+        height: 1vw;
+        width: 13vw;
+        margin-top:4.5vw;
+    }
+}
+@media (max-width: 480px) {
+    .main .c12 .ttt #lg2 img{
+        height: 5vw;
+        width: 10vw;
+
+    }
+    .main .c12 .ttt #lg2{
+        height: 1vw;
+        width: 13vw;
+        margin-top:4.5vw;
+    }
+}   
+.main .c12 .ttt #ttin{
+    height: 100%;
+    width: auto;
+    margin-top: 10px;
+    color: gray;
+    font-family: Verdana;
+    font-size: 14px;}
+    @media (min-width:480px)and (max-width: 1024px) {
+        .main .c12 .ttt #ttin{
+            height: 100%;
+            width: auto;
+            margin-top: 1vw;
+            color: gray;
+            font-family: Verdana;
+            font-size: 1.4vw;}
+    }
+    @media (max-width: 480px) {
+        .main .c12 .ttt #ttin{
+            height: 100%;
+            width: auto;
+            margin-top: 1vw;
+            color: gray;
+            font-family: Verdana;
+            font-size: 1.4vw;}
+        
+    } 
+.main .c13{
+    height: 100px;
+    width: auto;
+    background-image: url(../../assets/img/bgbottom.jpg);
+    
+}
+@media (min-width:480px)and (max-width: 1024px) {
+    .main .c13{
+        height: 6vw;
+        width: auto;
+        background-image: url(../../assets/img/bgbottom.jpg);
+        background-size: contain;
+    }
+}
+@media (max-width: 480px) {
+    .main .c13{
+        height: 6vw;
+        width: auto;
+        background-image: url(../../assets/img/bgbottom.jpg);
+        background-size: contain;
+    }
+}    
+/* Phan Noi Dung */
+
+.main .c4 .Content {
+    height: auto;
+    display: flex;
+    margin: 20px 0 50px 0px;
+}
+@media(max-width: 480px){
+    .main .c4 .Content {
+        height: auto;
+        display: flex;
+        margin: 20px 0 50px 0px;
+    }
+}
+@media(min-width: 480px)and (max-width:1024px){
+    .main .c4 .Content {
+        height: auto;
+       display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        position: relative;
+    }
+}
+.main .Content_Sub_Menu {
+    padding: 5px 266px;
+    background-color: #f1f0e5;
+    border-bottom: 1px solid #caca;
+    font-size: 14px;
+    font-weight: bolder;
+    color: black!important;
+}
+@media (max-width:480px){
+    .main .Content_Sub_Menu {
+        padding: 1px 2px;
+        background-color: #f1f0e5;
+        border-bottom: 1px solid #caca;
+        font-size: 14px;
+        font-weight: bolder;
+        color: black!important;
+    }
+}
+@media(min-width: 480px) and(max-width: 1024px){
+    .main .Content_Sub_Menu {
+        padding: 1px 1px;
+        background-color: #f1f0e5;
+        border-bottom: 1px solid #caca;
+        font-size: 10px;
+        font-weight: bolder;
+        color: black!important;
+       
+    }
+}
+.main .Content_Sub_Menu .fa-angle-right {
+    opacity: 50%;
+}
+
+
+/* Menu dieu huong */
+
+
+/* Phan Anh */
+
+.main .c4 .Content .MenuTuyenDung {
+    float: left;
+    margin-left: 270px;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .MenuTuyenDung {
+        position:absolute;
+        top: 10%;
+        left: -68%;
+        
+    } 
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .MenuTuyenDung {
+        position:absolute;
+        top: 1%;
+        left: -64%;
+        
+    } 
+}
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung {
+    width: 200px;
+    list-style: none;
+}
+@media(max-width:480px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung {
+        margin-top: 50px;
+        
+        
+    }
+}
+
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung li {
+    height: 35px;
+    margin-bottom: 10px;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung li {
+        height: 35px;
+        margin-bottom: 2px;
+        
+    }
+}
+@media(min-width:480px) and(max-width:1024px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung li {
+        height: 35px;
+        margin-bottom: 10px;
+    }
+}
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .active {
+    background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/ribon_left.png) no-repeat scroll left center #e71a0f;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .active {
+        background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/ribon_left.png) no-repeat scroll left center #e71a0f;
+    }
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .active {
+        background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/ribon_left.png) no-repeat scroll left center #e71a0f;
+    }
+}
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .active a {
+    color: white!important;
+    text-decoration: none;
+}
+@media(max-width:480px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .active a {
+        color: white!important;
+        text-decoration: none;
+    }
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .active a {
+        color: white!important;
+        text-decoration: none;
+    }
+}
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .inactive {
+    background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/ribon_left-ccc.png) no-repeat scroll left center #ccc;
+}
+@media(max-width:480px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .inactive {
+        background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/ribon_left-ccc.png) no-repeat scroll left center #ccc;
+    }
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .inactive {
+        background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/ribon_left-ccc.png) no-repeat scroll left center #ccc;
+    }
+}
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .inactive a {
+    color: #666!important;
+    text-decoration: none;
+}
+@media(max-width:480px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .inactive a {
+        color: #666!important;
+        text-decoration: none;
+    }
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung .inactive a {
+        color: #666!important;
+        text-decoration: none;
+    }
+}
+.main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung li a {
+    font-weight: bolder;
+    line-height: 35px;
+    font-size: 14px;
+    padding-left: 22px;
+}
+@media(max-width:480px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung li a {
+        font-weight: bolder;
+        line-height: 35px;
+        font-size: 14px;
+        padding-left: 22px;
+    }
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .MenuTuyenDung .Sub_MenuTuyenDung li a {
+        font-weight: bolder;
+        line-height: 35px;
+        font-size: 14px;
+        padding-left: 22px;
+    }
+}
+
+/* Phan mo ta */
+
+.main .c4 .Content .Describe {
+    float: left;
+    display: inline;
+    max-width: 50%;
+    margin-left: 20px;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .Describe {
+        position:relative;
+        display: inline;
+        max-width: 50%;
+        margin-top: 100px;
+    }
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .Describe {
+        position:relative;
+        display: inline;
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+}
+.main .c4 .Content .Describe>h1 {
+    padding-bottom: 30px;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .Describe>h1 {
+        padding-bottom: 30px;
+    }
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .Describe>h1{
+        position: absolute;
+        top: 1735%;
+        left: -7%;
+    }
+}
+
+/* Từng ô vuông */
+
+.main .c4 .Content .Describe .Menu1 {
+    height: 80px;
+    width: 600px;
+    background-color: #ededed;
+    margin-bottom: 20px;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .Describe .Menu1 {
+        height: 70px;
+        width: 450px;
+        background-color: #ededed;
+        margin-bottom: 20px;
+    }
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .Describe .Menu1 {
+        height: 70px;
+        width: 450px;
+        background-color: #ededed;
+        margin-bottom: 20px;
+    }
+}
+.main .c4 .Content .Describe .Menu1 .NoiDungOffice {
+    float: left;
+    display: inline;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .Describe .Menu1 .NoiDungOffice {
+        float: left;
+        display: inline;
+    }
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .Describe .Menu1 .NoiDungOffice {
+        float: left;
+        display: inline;
+    }
+}
+
+/* định dạng bên trong ô vuông */
+
+.main .c4 .Content .Describe .Menu1 .NoiDungOffice span {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    color: #636363;
+    margin: 50px 0px 20px 20px!important;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .Describe .Menu1 .NoiDungOffice span {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        color: #636363;
+        margin: 50px 0px 20px 20px!important;
+    }
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .Describe .Menu1 .NoiDungOffice span {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        color: #636363;
+        margin: 50px 0px 20px 20px!important;
+    }
+}
+.main .c4 .Content .Describe .Menu1 .NoiDungOffice p {
+    font-size: 14px;
+    color: #636363;
+    margin: 10px 0px 10px 20px;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .Describe .Menu1 .NoiDungOffice p {
+        font-size: 14px;
+        color: #636363;
+        margin: 10px 0px 10px 20px;
+    }
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .Describe .Menu1 .NoiDungOffice p {
+        font-size: 14px;
+        color: #636363;
+        margin: 10px 0px 10px 20px;
+    }
+}
+.main .c4 .Content .Describe .img {
+    height: 80px;
+    background: url("https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/bg-career-info.PNG") no-repeat scroll right center #ededed;
+}
+@medi(max-width: 480px){
+    .main .c4 .Content .Describe .img {
+        height: 80px;
+        background: url("https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/bg-career-info.PNG") no-repeat scroll right center #ededed;
+    }
+}
+@media(min-width:480px)and(max-width:1024px){
+    .main .c4 .Content .Describe .img {
+        height: 80px;
+        background: url("https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/bg-career-info.PNG") no-repeat scroll right center #ededed;
+    }
+}

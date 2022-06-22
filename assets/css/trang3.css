@@ -1,0 +1,832 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.main{
+    background-color:white;
+    }
+
+    @media(max-width: 480px){
+        .main{
+            height:30vh;
+        }
+    }     
+.main .c1{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 480px) {
+    .main .c1{
+       height: 40px;
+    }
+}
+.main .c1 .qc{
+    width: 980px;
+    height: 80px;
+    background-image: url(../../assets/img/qcd.jpg);
+}
+@media (max-width: 480px) {
+    .main .c1 .qc{
+        width: 100%;
+        height: 100%;
+        background-image: url(../../assets/img/qcd.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+.main .c2{
+    height: 30px;
+    display: flex;
+    justify-content: center;    
+}
+@media (max-width: 480px) {
+    .main .c2{
+        height: 20px;
+        display: flex;
+        justify-content: center;    
+    }
+}
+.main .c2 .lc{
+    height: 30px;
+    width: 980px;
+    display: flex;
+    justify-content: right;
+}
+@media (max-width: 480px) {
+    .main .c2 .lc{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+}
+.main .c2 .lc ul{
+    display: flex;
+}
+.main .c2 .lc ul li{
+    list-style-type: none;
+    margin-left: 30px;
+}
+@media (max-width: 480px) {
+    .main .c2 .lc ul li{
+        list-style-type: none;
+        margin-left: 20px;
+        overflow: hidden;
+    }
+}
+.main .c2 .lc ul li a{
+   
+    line-height: 30px;  
+    text-decoration: none;
+    color: #666;
+    font-family: Verdana;
+    font-size: 15px;
+}
+@media (max-width: 480px) {
+    .main .c2 .lc ul li a{
+   
+        line-height: 20px;  
+        text-decoration: none;
+        color: #666;
+        font-family: Verdana;
+        font-size: 0.4em;
+    }
+}
+.main .c3{
+    height: 119px;
+    display: flex;
+    justify-content: center;
+    background-image: url(../../assets/img/bg-top.png);
+}
+@media (max-width: 480px) {
+    .main .c3{
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        background-image: url(../../assets/img/bg-top.png);
+        background-size: contain;
+    }
+}
+.main .c3 .tc{
+    height: 119px;
+    width: 980px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width: 480px) {
+    .main .c3 .tc{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.main .c3 .tc .chu > ul{
+    display: flex;
+}
+.main .c3 .tc .chu ul li{
+    list-style-type: none;
+    height: 60px;
+    width: 150px;
+    position: relative;
+    top:18px;
+    font-family: Verdana;
+    font-weight: bold;
+}
+@media (max-width: 480px) {
+    .main .c3 .tc .chu ul li{
+        list-style-type: none;
+        height: 70px;
+        width: 70px;
+        position: relative;
+        top:14px;
+        font-family: Verdana;
+        font-weight: bold;
+        font-size: 0.5em;
+    }
+}
+.main .c3 .tc .chu ul li img{
+    height: 59px;
+    width: 136px; 
+    position: absolute;
+    bottom: 20px;
+}
+@media (max-width: 480px) {
+    .main .c3 .tc .chu ul li img{
+        height: 5em;
+        width: 8em; 
+        position: absolute;
+        bottom: 4em;
+    }
+}
+.main .c3 .tc .chu ul li a{
+    text-decoration: none;
+    line-height: 60px;
+    color: black;
+}
+.main .c3 .tc .chu ul li .submenu{
+    position: absolute;
+    display: none;
+    padding:0px 20px;
+    border: 4px solid gray;
+    right: 4px;
+}
+.main .c3 .tc .chu ul li .submenu li a{
+    color: white;
+    line-height: 5px;
+}
+.main .c3 .tc .chu ul li .submenu li a:hover{
+    color:red;
+}
+
+.main .c3 .tc .chu ul li:hover .submenu{
+    display: block;
+    background-image: url(../../assets/img/bg_menu_hover.png);
+
+}
+
+.main .c10{
+    height: 30px;
+}
+@media (max-width: 480px) {
+    .main .c10{
+        height: 5px;
+    }
+}   
+.main .c11{
+    height: 190px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 480px) {
+    .main .c11{
+        height: 90px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+}   
+.main .c11 .tt{
+    height: 100%;
+    width: 980px;
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 480px) {
+    .main .c11 .tt{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}   
+.main .c11 .tt div{
+    height: 100%;
+    width: 240px;
+}
+.main .c11 .tt div p{
+    margin-top: 30px;
+    font-family: Verdana;
+    font-size: 15px;
+    color:gray;
+    position: relative;
+}
+
+@media (max-width: 480px) {
+    .main .c11 .tt div p{
+        margin-top: 10px;
+        font-family: Verdana;
+        font-size: 0.5em;
+        color:gray;
+        position: relative;
+    }
+    
+}
+@media (max-width: 480px) {
+    .main .c11 .tt div p a img{
+        height: 2em;
+        width: 2em;
+    }
+    
+}      
+.main .c11 .tt div p a img:hover{
+    height: 30px;
+    width: 30px;
+}
+@media (max-width: 480px) {
+    .main .c11 .tt div p a img:hover{
+        height: 1.5em;
+        width: 1.5em;
+    }
+    
+}      
+.main .c11 .tt div p b{
+    color: #666;
+    position: absolute;
+    top:-10px;
+    
+}
+.main .c12{
+    height: 140px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 480px) {
+    .main .c12{
+        height: 80px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+}   
+.main .c12 .ttt{
+    height: 100%;
+    width: 980px;
+    display: flex;
+}
+@media (max-width: 480px) {
+    .main .c12 .ttt{
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+}   
+.main .c12 .ttt #lg2{
+    height: 100%;
+    width: 130px;
+    margin-top:50px;
+}
+@media (max-width: 480px) {
+    .main .c12 .ttt #lg2{
+        height: 100%;
+        width: 130px;
+        margin-top:25px;
+    }
+}   
+.main .c12 .ttt #ttin{
+    height: 100%;
+    width: auto;
+    margin-top: 10px;
+    color: gray;
+    font-family: Verdana;
+    font-size: 14px;}
+    @media (max-width: 480px) {
+        .main .c12 .ttt #ttin{
+            height: 100%;
+            width: auto;
+            margin-top: 10px;
+            color: gray;
+            font-family: Verdana;
+            font-size: 0.4em;}
+        
+    } 
+.main .c13{
+    height: 100px;
+    width: auto;
+    background-image: url(../../assets/img/bgbottom.jpg);
+    
+}
+@media (max-width: 480px) {
+    .main .c13{
+        height: 50px;
+        width: auto;
+        background-image: url(../../assets/img/bgbottom.jpg);
+        background-size: contain;
+    }
+}    
+
+
+/* Phan Noi Dung */
+
+.main .c4 {
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+@media(max-width:480px){
+    .main .c4 {
+        height: auto;
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
+}
+@media(min-width: 480px)and (max-width:1024px){
+    .main .c4 {
+        height: auto;
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
+}
+.main .c4 .Content {
+    margin-top: 20px;
+    
+}
+@media (max-width: 480px){
+    .main .c4 .Content {
+        display: inline;
+        margin-top: 30px;
+        
+}
+}
+@media (min-width:480px)and (max-width:1024px){
+    .main .c4 .Content {
+        display: inline;
+        margin-top: 30px;
+        
+}
+}
+
+.main .c4>span {
+    font-size: 50px !important;
+}
+
+.main .Content_Sub_Menu {
+    display: flex;
+    width: 100%;
+    padding: 5px 266px;
+    background-color: #f1f0e5;
+    border-bottom: 1px solid #caca;
+    font-size: 14px;
+    font-weight: bolder;
+    color: black!important;
+}
+#NNN{
+    width: 980px;
+}
+@media(max-width: 480px){
+    #NNN{
+        width: 388px;
+    }
+}
+@media(min-width: 480px)and (max-width:1024px){
+    #NNN{
+        width: 100vw;
+    }
+}
+.main .Content_Sub_Menu .fa-angle-right {
+    opacity: 50%;
+}
+
+
+/* Menu dieu huong */
+
+
+/* Phan Anh */
+
+.main .c4 .Content .Img {
+    float: left;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .Img {
+        height: auto;
+    }
+}
+@media(min-width:480px)and (max-width:1024px){
+    .main .c4 .Content .Img {
+        height: auto;
+    }
+}
+
+.main .c4 .Content .Img img {
+    height: 287px;
+    width: 181px;
+    float: left;
+}
+@media (max-width: 480px){
+    .main .c4 .Content .Img img {
+      float: left;
+      margin-right: 200px;
+        
+    }
+
+}
+@media (min-width:480px) and(max-width:1024px){
+    .main .c4 .Content .Img img {
+        float: left;
+        margin-right: 200px;
+          
+      }
+}
+/* Phan mo ta */
+
+.main .c4 .Content .Describe {
+    float: left;
+    margin-left: 20px;
+}
+@media (max-width: 480px) {
+    .main .c4 .Content .Describe {
+        vertical-align: middle;
+        margin-left: 10px;
+        
+    }
+}
+@media (min-width: 480px) and (max-width: 1024px){
+    .main .c4 .Content .Describe {
+        vertical-align: middle;
+        margin-left: 10px;
+        
+    }
+}
+
+/* Ten Phim */
+
+.main .c4 .Content .Describe .Name {
+    color: black;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 18px;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .Describe .Name {
+        color: black;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        
+    }
+}
+@media(min-width: 480px) and(max-width: 1024px){
+    .main .c4 .Content .Describe .Name {
+        color: black;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        
+    }
+}
+
+
+/* Phan Lable in dam */
+
+.main .c4 .Content .Describe .wa .wa1 label {
+    font-weight: bolder;
+    display: inline-flex;
+    font-size: 13px;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .Describe .wa .wa1 label {
+       
+        font-size: 13px;
+    }
+}
+@media(min-width: 480px) and (max-width:1024px){
+    .main .c4 .Content .Describe .wa .wa1 label {
+       
+        font-size: 13px;
+    }
+}
+
+.main .c4 .Content .Describe .wa .wa1 .std {
+    display: inline-flex;
+    font-size: 14px;
+}
+@media(max-width: 480px){
+    .main .c4 .Content .Describe .wa .wa1 .std {
+        display: inline-flex;
+        font-size: 14px;
+    }
+}
+@media(min-width:480px) and (max-width:1024px){
+    .main .c4 .Content .Describe .wa .wa1 .std {
+        display: inline-flex;
+        font-size: 14px;
+    }
+}
+
+.main .c4 .Content .Describe .wa .wa1 .std_Rated {
+    display: inline-flex;
+    font-weight: bolder;
+    font-size: 13px;
+}
+@media(max-width:480px){
+    .main .c4 .Content .Describe .wa .wa1 .std_Rated {
+        display: inline-flex;
+        font-weight: bolder;
+        font-size: 13px;
+    }
+}
+@media(min-width:480px) and (max-width:1024px){
+    .main .c4 .Content .Describe .wa .wa1 .std_Rated {
+        display: inline-flex;
+        font-weight: bolder;
+        font-size: 13px;
+    }
+}
+
+
+/* Phan noi dung mo ta */
+@media(max-width: 480px){
+    .main .c4 .va1{
+        position:relative;
+        max-width: 100%;
+    }
+}
+.main .c4 .Last {
+    float: left;
+    margin: 20px 0 20px 0;
+}
+@media(max-width: 480px){
+    .main .c4 .Last {
+        float: left;
+        font-size: 3vw;
+        margin: 20px 0 20px 0;
+        z-index: 10;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: block;
+        width: 100px;
+   
+    }
+}
+@media(min-width: 480px)and (max-width:1024px){
+    .main .c4 .Last {
+        float: left;
+        font-size: 3vw;
+        margin: 20px 0 20px 0;
+        z-index: 10;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: block;
+        width: 100px;
+   
+    }
+}
+@media(max-width: 480px){
+    .main .c9{
+        position:relative;
+        height:100%;
+        width: 100%;
+   
+    }
+}
+@media(max-width: 480px){
+    .main .c9 .Time{
+        position:absolute;
+        
+        top: 41%;
+        left: 23%;
+    }
+}
+.main .Time {
+    padding: 20px;
+    display: flex;
+}
+@media(max-width: 480px){
+    .main .Time {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.main .Time .Choose_Time .Curent {
+    list-style: none;
+}
+@media(max-width: 480px){
+    .main .Time .Choose_Time .Curent {
+        list-style: none;
+        
+        
+    }
+}
+@media(min-width: 480px)and (max-width: 1024px){
+    .main .Time .Choose_Time .Curent {
+        list-style: none;
+        margin-top: 94px;
+    }
+}
+.main .Time .Choose_Time .Curent span {
+    font-size: 20px;
+    color: #717171;
+}
+@media(max-width: 480px){
+    .main .Time .Choose_Time .Curent span {
+        font-size: 20px;
+        color: #717171;
+        display: none;
+    }
+}
+
+.main .Time .Choose_Time .Curent .Sub_Choose_Time {
+    list-style: none;
+    display: inline;
+}
+@media(max-width: 480px){
+    .main .Time .Choose_Time .Curent .Sub_Choose_Time {
+        list-style: none;
+        display: inline;
+    }
+}
+
+.main .Time .Choose_Time .Curent .Sub_Choose_Time .Sub_Curent {
+    list-style: none;
+    display: inline;
+    border-radius: 5px;
+    list-style: none;
+    float: left;
+    height: 25px;
+    width: auto;
+    padding: 10px;
+    margin: 5px;
+    line-height: 25px;
+    cursor: pointer;
+    border: 1px solid #222;
+}
+@media(max-width: 480px){
+    .main .Time .Choose_Time .Curent .Sub_Choose_Time .Sub_Curent {
+        list-style: none;
+        display: inline;
+        border-radius: 5px;
+        list-style: none;
+        float: left;
+        height: 25px;
+        width: auto;
+        padding: 10px;
+        margin: 5px;
+        line-height: 25px;
+        cursor: pointer;
+        border: 1px solid #222;
+    }
+}
+.main .Time .Choose_Time .Curent .Sub_Choose_Time .Sub_Curent:hover {
+    border: 1px solid red;
+
+}
+@media(max-width: 480px){
+    .main .Time .Choose_Time .Curent .Sub_Choose_Time .Sub_Curent:hover {
+        border: 1px solid red;
+    
+    }
+}
+.main .c9 {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+@media(max-width: 480px){
+    .main .c9 {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 20px 0;
+    }
+}
+
+.ghe  {
+    display: flex;
+    margin-left: 370px;
+    
+    
+}
+@media(max-width: 480px){
+    .ghe  {
+        display: flex;
+        margin-left: 1px;
+        
+        
+    }
+}
+@media(min-width: 480px)and (max-width: 1024px){
+    .ghe  {
+        display: flex;
+        margin-left: 53px;
+        margin-top: 110px;
+        
+    }
+}
+.ghe .cot_1{
+    display: flex;
+    
+    
+}
+@media(max-width: 480px){
+    .ghe .cot_1{
+        display: flex;
+
+    }
+}
+
+.ghe .cot_1 div{
+    display: flex;
+    height: 30px;
+    width: 40px;
+    line-height: 30px;
+    border: 2px solid rgb(8, 185,162);
+    margin: 3px;
+    justify-content: center;
+    
+}
+@media(max-width: 480px){
+    .ghe .cot_1 div{
+        display: flex;
+        height: 20px;
+        width: 18px;
+        line-height: 20px;
+        border: 1px solid rgb(8, 185,162);
+        margin: 2px;
+        justify-content: center;
+        font-size: 11px;
+        
+    }
+}
+.ghe .cot_1 div:hover{
+    border: 2px solid red;
+}
+@media(max-width: 480px){
+    .ghe .cot_1 div:hover{
+        border: 2px solid red;
+    }
+}
+
+.ve {
+    text-align: center;
+    
+}
+@media(max-width: 480px){
+    .ve {
+        text-align: center;
+        padding-left:50px;
+    }
+}
+.ve .wa4{
+    font-size: 20px;
+    background: red;
+    color:azure;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 7px;
+    border-radius: 6px;
+    border: none
+}
+@media(max-width: 480px){
+    .ve .wa4{
+        font-size: 15px;
+        background: red;
+        color:azure;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 7px;
+        border-radius: 6px;
+        border: none
+    }
+}
+.ghe .Curent{
+    font-size: 20px;
+    color:#222;
+}
+@media(max-width: 480px){
+    .ghe .Curent{
+    font-size: 20px;
+    color:#222;
+}
+}
