@@ -1,4 +1,19 @@
 window.addEventListener("load",function(){
+    let listTrang=localStorage.getItem("list-trang") ? JSON.parse(localStorage.getItem("list-trang")):[] ;
+
+    var aa1=document.getElementById('anh1');
+    var aa2=document.getElementById('anh2');
+    var aa3=document.getElementById('anh3');
+    var aa4=document.getElementById('anh4');
+    
+    aa1.style.backgroundImage = "url("+listTrang[0].anh.slice(0)+")";
+    aa1.style.backgroundSize ="cover";
+    aa2.style.backgroundImage = "url("+listTrang[1].anh.slice(0)+")";
+    aa2.style.backgroundSize ="cover";
+    aa3.style.backgroundImage = "url("+listTrang[2].anh.slice(0)+")";
+    aa3.style.backgroundSize ="cover";
+    aa4.style.backgroundImage = "url("+listTrang[3].anh.slice(0)+")";
+    aa4.style.backgroundSize ="cover";
     //kiemtradangnhap
     listUser=localStorage.getItem("list-user") ? JSON.parse(localStorage.getItem("list-user")):[] ;
     var kt=0;
@@ -9,7 +24,7 @@ window.addEventListener("load",function(){
     });
     if(kt==0){
         this.alert("Phải đăng nhập trước.");
-        window.location.href="log.html";    
+        window.location.href="dangnhap.html";    
     }
     //
     const slider=document.querySelector(".slider");

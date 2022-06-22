@@ -127,7 +127,7 @@ function login(){
         }
         else{
 
-            window.location.href = "hompagelog.html";
+            window.location.href = "trangchulog.html";
         }
     }
    

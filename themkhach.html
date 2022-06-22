@@ -33,7 +33,7 @@
                     <i class="fa-solid fa-users me-2"></i>Quản lý khách hàng</a>
                 <a href="./quanlyweb.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fa-solid fa-newspaper me-2"></i>Quản lý nội dung web</a>
-                <a href="./hompage.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                <a href="./trangchu.html" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
                         class="fas fa-power-off me-2"></i>Đăng xuất</a>
             </div>
         </div>
@@ -78,38 +78,8 @@
       <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     
-    <script>
-        function makeid() {
-            var text = "";
-            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";        
-            for (var i = 0; i < 6; i++)
-            text += possible.charAt(Math.floor(Math.random() * possible.length));
-            return text;
-        }
-        function add(){
-            var username=document.getElementById('name').value;
-            if(username==""){
-                alert("Nhập tên cần thêm");
-            }
-            else{
-                               let listUserNone=localStorage.getItem("list-user-none") ? JSON.parse(localStorage.getItem("list-user-none")):[] ;
-                listUserNone.push({
-                    makh:makeid(),
-                    username : username,
-                });
-                localStorage.setItem("list-user-none",JSON.stringify(listUserNone));
-            }
-           
 
-        }
-
-        var el = document.getElementById("wrapper");
-        var toggleButton = document.getElementById("menu-toggle");
-
-        toggleButton.onclick = function () {
-            el.classList.toggle("toggled");
-        };
-    </script>
+<script src="./assets/js/themkhach.js"></script>
 </body>
 
 </html>
